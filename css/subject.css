@@ -21,6 +21,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+#no-questions {
+    display: none;
+}
+
 @media screen and (max-width: 800px) { 
     #questions {
         grid-template-columns: 1fr;
