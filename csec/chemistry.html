@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/constant.css">
+    <link rel="stylesheet" href="../css/subject.css">
+    
+    <title>CSEC Chemistry | CXC Prep</title>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/subject.js"></script>
+</head>
+<body>
+    <article>
+        <nav>
+            <ul>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href = "../about.html">About</a></li>
+                <li><a href = "../contact.html">Contact</a></li>
+                <li><a href = "../privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+
+        <div id = "intro">
+            <h1>Chemistry</h1>
+        </div>
+
+        <div id = "papers">
+            <h2>Past Papers</h2>
+            <iframe src="https://drive.google.com/embeddedfolderview?id=1F-a-htU7efTkwmW5-JbizGtRa29hQu1i#list" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+
+        <div id = "cover-img" class = "container">
+            <img src="../media/girl-sitting-reading.jpg" alt="">
+        </div>
+
+        <div>
+            <h2>Select the check boxes below to filter the database of CSEC Past Paper Questions by topic:</h2>
+			<div id = "filter">
+<!--topic starts here-->
+                <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
+                <label><input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>
+                <label><input type="checkbox" class="topic", value = "s-m" onclick="sort()" checked = "true"><span>States of Matter</span></label>
+                <label><input type="checkbox" class="topic", value = "m-s" onclick="sort()" checked = "true"><span>Mixtures and Separations</span></label>
+                <label><input type="checkbox" class="topic", value = "atom" onclick="sort()" checked = "true"><span>Atomic Structure</span></label>
+                <label><input type="checkbox" class="topic", value = "peri" onclick="sort()" checked = "true"><span>Periodicity</span></label>
+                <label><input type="checkbox" class="topic", value = "s-b" onclick="sort()" checked = "true"><span>Structure and Bonding</span></label>
+                <label><input type="checkbox" class="topic", value = "m-c-v" onclick="sort()" checked = "true"><span>Moles, Concentration and Volume</span></label>
+                <label><input type="checkbox" class="topic", value = "a-b-s" onclick="sort()" checked = "true"><span>Acids, Bases and Salts</span></label>
+                <label><input type="checkbox" class="topic", value = "redo" onclick="sort()" checked = "true"><span>Redox</span></label>
+                <label><input type="checkbox" class="topic", value = "elec" onclick="sort()" checked = "true"><span>Electrochemistry</span></label>
+                <label><input type="checkbox" class="topic", value = "r-o-r" onclick="sort()" checked = "true"><span>Rates of Reaction</span></label>
+                <label><input type="checkbox" class="topic", value = "ener" onclick="sort()" checked = "true"><span>Energetics</span></label>
+                <label><input type="checkbox" class="topic", value = "intro" onclick="sort()" checked = "true"><span>Organic Chemistry Introduction</span></label>
+                <label><input type="checkbox" class="topic", value = "reac" onclick="sort()" checked = "true"><span>Organic Chemistry Reactions</span></label>
+                <label><input type="checkbox" class="topic", value = "poly" onclick="sort()" checked = "true"><span>Polymers</span></label>
+                <label><input type="checkbox" class="topic", value = "soap" onclick="sort()" checked = "true"><span>Soaps</span></label>
+                <label><input type="checkbox" class="topic", value = "meta" onclick="sort()" checked = "true"><span>Metals</span></label>
+                <label><input type="checkbox" class="topic", value = "n-m" onclick="sort()" checked = "true"><span>Non-Metals</span></label>
+                <label><input type="checkbox" class="topic", value = "g-p" onclick="sort()" checked = "true"><span>Gas Preparation</span></label>
+                <label><input type="checkbox" class="topic", value = "wate" onclick="sort()" checked = "true"><span>Water</span></label>
+                <label><input type="checkbox" class="topic", value = "g-c" onclick="sort()" checked = "true"><span>Green Chemistry</span></label>
+                <label><input type="checkbox" class="topic", value = "q-a" onclick="sort()" checked = "true"><span>Qualitative Analysis</span></label>
+<!--topic ends here-->
+			</div>
+		</div>
+
+        <div>
+			<h2>Database of Sorted Questions: </h2>
+			<ul id = "questions">
+<!--question starts here-->
+                <li data-topic = "elec">May/June Paper 2 2021 #1.a</li>
+                <li data-topic = "m-c-v">May/June Paper 2 2021 #1.b</li>
+                <li data-topic = "elec">May/June Paper 2 2021 #1.c</li>
+                <li data-topic = "elec, m-c-v">May/June Paper 2 2021 #1.d</li>
+                <li data-topic = "elec">May/June Paper 2 2021 #1.e - #1.f</li>
+                <li data-topic = "a-b-s">May/June Paper 2 2021 #2.a - #2.b</li>
+                <li data-topic = "q-a, a-b-s, meta">May/June Paper 2 2021 #2.c</li>
+                <li data-topic = "intro">May/June Paper 2 2021 #3.a - #3.c</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2021 #3.d</li>
+                <li data-topic = "intro">May/June Paper 2 2021 #3.e</li>
+                <li data-topic = "peri, s-b">May/June Paper 2 2021 #4.a</li>
+                <li data-topic = "atom">May/June Paper 2 2021 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2021 #4.c</li>
+                <li data-topic = "intro">May/June Paper 2 2021 #5.a - #5.b</li>
+                <li data-topic = "reac, intro">May/June Paper 2 2021 #5.c</li>
+                <li data-topic = "reac">May/June Paper 2 2021 #5.d</li>
+                <li data-topic = "meta">May/June Paper 2 2021 #6.a - #6.c</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2019 #1.a - #1.d</li>
+                <li data-topic = "a-b-s, m-c-v">May/June Paper 2 2019 #1.e</li>
+                <li data-topic = "peri">May/June Paper 2 2019 #2.a</li>
+                <li data-topic = "n-m, a-b-s">May/June Paper 2 2019 #2.b</li>
+                <li data-topic = "s-b">May/June Paper 2 2019 #2.c</li>
+                <li data-topic = "atom">May/June Paper 2 2019 #2.d</li>
+                <li data-topic = "s-b">May/June Paper 2 2019 #2.e - #2.g</li>
+                <li data-topic = "poly">May/June Paper 2 2019 #3.a - #3.c</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2019 #3.d</li>
+                <li data-topic = "q-a, s-b">May/June Paper 2 2019 #4.a</li>
+                <li data-topic = "meta">May/June Paper 2 2019 #4.b</li>
+                <li data-topic = "meta, a-b-s">May/June Paper 2 2019 #4.c</li>
+                <li data-topic = "intro">May/June Paper 2 2019 #5.a - #5.b</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2019 #5.c</li>
+                <li data-topic = "meta">May/June Paper 2 2019 #6.a - #6.c</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2018 #1.a</li>
+                <li data-topic = "a-b-s, m-c-v">May/June Paper 2 2018 #1.b</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2018 #1.c - #1.e</li>
+                <li data-topic = "q-a">May/June Paper 2 2018 #1.f</li>
+                <li data-topic = "peri">May/June Paper 2 2018 #2.a - #2.b</li>
+                <li data-topic = "n-m, redo">May/June Paper 2 2018 #2.c</li>
+                <li data-topic = "n-m, peri">May/June Paper 2 2018 #2.d</li>
+                <li data-topic = "intro">May/June Paper 2 2018 #3.a - #3.c</li>
+                <li data-topic = "reac">May/June Paper 2 2018 #3.d - #3.f</li>
+                <li data-topic = "elec">May/June Paper 2 2018 #4.a - #4.c</li>
+                <li data-topic = "reac">May/June Paper 2 2018 #5.a</li>
+                <li data-topic = "soap">May/June Paper 2 2018 #5.b</li>
+                <li data-topic = "poly">May/June Paper 2 2018 #5.c</li>
+                <li data-topic = "meta">May/June Paper 2 2018 #6.a</li>
+                <li data-topic = "meta, n-m">May/June Paper 2 2018 #6.b</li>
+                <li data-topic = "g-c">May/June Paper 2 2018 #6.c</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2017 #1.a - #1.e</li>
+                <li data-topic = "ener">May/June Paper 2 2017 #1.f</li>
+                <li data-topic = "g-p">May/June Paper 2 2017 #1.g</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2017 #1.h</li>
+                <li data-topic = "m-c-v">May/June Paper 2 2017 #2.a</li>
+                <li data-topic = "m-c-v, reac">May/June Paper 2 2017 #2.b</li>
+                <li data-topic = "elec">May/June Paper 2 2017 #2.c</li>
+                <li data-topic = "intro">May/June Paper 2 2017 #3.a</li>
+                <li data-topic = "reac">May/June Paper 2 2017 #3.b - #3.c</li>
+                <li data-topic = "a-b-s">May/June Paper 2 2017 #4.a - #4.c</li>
+                <li data-topic = "reac">May/June Paper 2 2017 #5.a</li>
+                <li data-topic = "reac, m-s">May/June Paper 2 2017 #5.b</li>
+                <li data-topic = "reac">May/June Paper 2 2017 #5.c</li>
+                <li data-topic = "meta">May/June Paper 2 2017 #6.a - #6.b</li>
+                <li data-topic = "s-m">May/June Paper 2 2016 #1.a</li>
+                <li data-topic = "q-a">May/June Paper 2 2016 #1.b</li>
+                <li data-topic = "redo">May/June Paper 2 2016 #2.a</li>
+                <li data-topic = "redo, meta">May/June Paper 2 2016 #2.b</li>
+                <li data-topic = "intro">May/June Paper 2 2016 #3.a</li>
+                <li data-topic = "intro">May/June Paper 2 2016 #3.b</li>
+                <li data-topic = "reac">May/June Paper 2 2016 #3.c</li>
+                <li data-topic = "intro">May/June Paper 2 2016 #3.d</li>
+                <li data-topic = "reac">May/June Paper 2 2016 #3.e</li>
+                <li data-topic = "s-b">May/June Paper 2 2016 #4.a - #4.c</li>
+                <li data-topic = "s-b">May/June Paper 2 2016 #5.a</li>
+                <li data-topic = "reac">May/June Paper 2 2016 #5.b</li>
+                <li data-topic = "intro">May/June Paper 2 2016 #5.a</li>
+                <li data-topic = "reac">May/June Paper 2 2016 #5.b</li>
+                <li data-topic = "meta">May/June Paper 2 2016 #6.a - #6.c</li>
+                <li data-topic = "intro">May/June Paper 2 2015 #1.a</li>
+                <li data-topic = "ener">May/June Paper 2 2015 #1.b</li>
+                <li data-topic = "q-a">May/June Paper 2 2015 #1.c</li>
+                <li data-topic = "s-m">May/June Paper 2 2015 #2.a</li>
+                <li data-topic = "s-b">May/June Paper 2 2015 #2.b - #2.c</li>
+                <li data-topic = "intro">May/June Paper 2 2015 #3.a - #3.b</li>
+                <li data-topic = "poly">May/June Paper 2 2015 #3.c</li>
+                <li data-topic = "a-b-s, wate, s-b">May/June Paper 2 2015 #4.a</li>
+                <li data-topic = "wate">May/June Paper 2 2015 #4.b</li>
+                <li data-topic = "m-s">May/June Paper 2 2015 #5.a</li>
+                <li data-topic = "reac">May/June Paper 2 2015 #5.b</li>
+                <li data-topic = "a-b-s">May/June Paper 2 2015 #5.c</li>
+                <li data-topic = "soap">May/June Paper 2 2015 #6.a</li>
+                <li data-topic = "g-c">May/June Paper 2 2015 #6.b - #6.c</li>
+                <li data-topic = "r-o-r, ener">May/June Paper 2 2014 #1.a</li>
+                <li data-topic = "r-o-r, meta">May/June Paper 2 2014 #1.b</li>
+                <li data-topic = "q-a">May/June Paper 2 2014 #1.c</li>
+                <li data-topic = "meta, peri">May/June Paper 2 2014 #2.a</li>
+                <li data-topic = "meta">May/June Paper 2 2014 #2.b</li>
+                <li data-topic = "s-b">May/June Paper 2 2014 #2.c</li>
+                <li data-topic = "meta, m-c-v">May/June Paper 2 2014 #2.d</li>
+                <li data-topic = "intro">May/June Paper 2 2014 #3.a</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2014 #3.b - #3.c</li>
+                <li data-topic = "s-b">May/June Paper 2 2014 #4.a</li>
+                <li data-topic = "elec">May/June Paper 2 2014 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2014 #5.a - #5.c</li>
+                <li data-topic = "meta">May/June Paper 2 2014 #6.a</li>
+                <li data-topic = "n-m">May/June Paper 2 2014 #6.b - #6.c</li>
+                <li data-topic = "a-b-s">May/June Paper 2 2014 #6.d - #6.f</li>
+                <li data-topic = "a-b-s, m-c-v">May/June Paper 2 2013 #1.a</li>
+                <li data-topic = "s-b">May/June Paper 2 2013 #1.b</li>
+                <li data-topic = "m-s">May/June Paper 2 2013 #1.c</li>
+                <li data-topic = "q-a">May/June Paper 2 2013 #1.d</li>
+                <li data-topic = "peri">May/June Paper 2 2013 #2.a - #2.b</li>
+                <li data-topic = "s-b">May/June Paper 2 2013 #2.c</li>
+                <li data-topic = "intro">May/June Paper 2 2013 #3.a</li>
+                <li data-topic = "poly">May/June Paper 2 2013 #3.b - #3.d</li>
+                <li data-topic = "r-o-r">May/June Paper 2 2013 #4.a</li>
+                <li data-topic = "r-o-r, m-c-v">May/June Paper 2 2013 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2013 #4.c</li>
+                <li data-topic = "elec">May/June Paper 2 2013 #5.a - #5.b</li>
+                <li data-topic = "n-m">May/June Paper 2 2013 #6.a - #6.c</li>
+                <li data-topic = "r-o-r, a-b-s, m-c-v">May/June Paper 2 2012 #1.a</li>
+                <li data-topic = "q-a">May/June Paper 2 2012 #1.b</li>
+                <li data-topic = "elec">May/June Paper 2 2012 #2.a - #2.c</li>
+                <li data-topic = "elec, redo">May/June Paper 2 2012 #2.d</li>
+                <li data-topic = "elec">May/June Paper 2 2012 #2.e - #2.g</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2012 #3.a</li>
+                <li data-topic = "intro, reac, q-a">May/June Paper 2 2012 #3.b</li>
+                <li data-topic = "atom">May/June Paper 2 2012 #4.a</li>
+                <li data-topic = "a-b-s, peri, s-b">May/June Paper 2 2012 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2012 #5.a - #5.d</li>
+                <li data-topic = "wate">May/June Paper 2 2012 #6.a - #6.b</li>
+                <li data-topic = "n-m">May/June Paper 2 2012 #6.c</li>
+                <li data-topic = "elec, m-c-v">May/June Paper 2 2011 #1.a</li>
+                <li data-topic = "q-a">May/June Paper 2 2011 #1.b</li>
+                <li data-topic = "s-b">May/June Paper 2 2011 #2.a - #2.d</li>
+                <li data-topic = "intro">May/June Paper 2 2011 #3.a</li>
+                <li data-topic = "soap">May/June Paper 2 2011 #3.b - #3.c</li>
+                <li data-topic = "poly, reac">May/June Paper 2 2011 #3.d</li>
+                <li data-topic = "a-b-s">May/June Paper 2 2011 #4.a</li>
+                <li data-topic = "meta">May/June Paper 2 2011 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2011 #5.a - #5.b</li>
+                <li data-topic = "m-c-v">May/June Paper 2 2011 #5.c</li>
+                <li data-topic = "poly">May/June Paper 2 2011 #6.a - #6.b</li>
+                <li data-topic = "redo">May/June Paper 2 2011 #6.c</li>
+                <li data-topic = "ener, ror, m-c-v">May/June Paper 2 2010 #1.a</li>
+                <li data-topic = "q-a">May/June Paper 2 2010 #1.b</li>
+                <li data-topic = "ror">May/June Paper 2 2010 #1.c</li>
+                <li data-topic = "peri, meta, atom">May/June Paper 2 2010 #2.a - #2.b</li>
+                <li data-topic = "s-b">May/June Paper 2 2010 #2.c</li>
+                <li data-topic = "intro">May/June Paper 2 2010 #3.a</li>
+                <li data-topic = "intro, reac">May/June Paper 2 2010 #3.b</li>
+                <li data-topic = "redo">May/June Paper 2 2010 #4.a</li>
+                <li data-topic = "intro">May/June Paper 2 2010 #4.b</li>
+                <li data-topic = "meta">May/June Paper 2 2010 #5.a - #5.e</li>
+<!--question ends here-->
+			</ul>
+			<p id = "no-questions">No questions could be found for the selected topic(s).</p>
+		</div>
+
+        <div>
+            <h2>Similar Subjects:</h2>
+            <ul>
+                <li><a href= "biology.html">Biology</a></li>
+                <li><a href= "physics.html">Physics</a></li>
+            </ul>
+        </div>
+
+        <footer>This webiste (CXC Prep) is not affiliated with the Caribbean Examination Council (CXC). The use of any of their works is considered fair use. Any external links are being provided as a convenience and are for informational purposes only. Linking to any external websites doesn't constitute an endorsement or an approval by the owner/editor of CXC Prep of any content/opinions published by these external websites.</footer>
+    </article>
+</body>
+</html>

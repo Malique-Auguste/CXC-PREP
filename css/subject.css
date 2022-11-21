@@ -1,0 +1,28 @@
+#intro, #papers {
+    grid-column: 1 / 5;
+}
+
+
+
+#filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#filter > label {
+    margin: 1vw;
+    list-style-type: none;
+}
+
+#questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) { 
+    #questions {
+        grid-template-columns: 1fr;
+    }
+}
