@@ -1,4 +1,5 @@
 var li, no_questions, input, all, none;
+var file_data;
 
 function sort() {
     var topics, input, filter ;
@@ -93,4 +94,34 @@ function select_none() {
         all.checked = false;
         sort()
     }
+}
+
+function load_files () {
+    
+    fetch("../csec/database/data.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+          file_data = data;
+        
+
+    var file_list = document.getElementById("papers_list")
+
+    console.log(2);
+
+    for (let i = 0; i < file_data.length; i++) {
+        var file = file_data[i]
+        console.log(1);
+
+        var item = document.createElement("li");
+        item.innerHTML = file.name;
+        item.setAttribute("value", file[1])
+
+        file_list.appendChild(item)
+        console.log(item)
+        console.log(file)
+    }
+})
 }
