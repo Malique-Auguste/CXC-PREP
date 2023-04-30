@@ -54,6 +54,10 @@ h3, p, span, li, input, textarea, label {
     font-size: 1.25rem;
 }
 
+li {
+    padding: 0.25rem;
+}
+
 article > * {
     display: inline-block;
     border: 2px solid black;

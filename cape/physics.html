@@ -54,8 +54,73 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
             <h3>Unit 1</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1vouPJ2iO16yCJeonSl-94qjCon214cbw#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u1 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1TA7yFsieBDW5BsW62Hg9lC3MiBcu2KAb')">CAPE Physics 2022 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kRSBnoO6_Th28fL0Whn3w017650c9p2p')">CAPE Physics 2018 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('146QR6594RXrgl0MlngswM3E-FzXgiWtn')">CAPE Physics 2020 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1AYkGSEodLIyB-UNjR6piCL1y2DKW_3LF')">CAPE Physics 2018 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1mW4T0tieWo1FkalEv-hEewVftM3kcNPd')">Physics unit 1 2021 paper 2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1oM8yBzgUNJedPkQIg266jxiIN9ynwr5y')">CAPE Physics 2019 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1DawjQ5NSfZh5dB9cENIICp0nR5IS6UX_')">MCQ ANS UNIT1.jpg</li>
+				<li class="pdf_link" onclick="load_pdf('1X1ZOmeJNcF4ilF_kcGLRJQCkGHUGdPjp')">CAPE_Physics_2020_U1_P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1a-6hTwdwIG4SBRHT64AfKfK3qCVqnXGY')">CAPE Physics 2019 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1PGYUkeTdA9ByWIt4LKZQMrx2axDTOMcW')">CAPE U1 MCQ Answers.jpg</li>
+				<li class="pdf_link" onclick="load_pdf('1mkM-6NsShgn5xL_7gBAK4NoQ2L7DdNV-')">CAPE Physics 2016 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1aQHiih36-GtmtOH5XWHPGM_bI6FdHmfO')">CAPE Physics 2018 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qL0uxqDdHAkIJ_Tkg5NSTtPrr4BnXnuO')">CAPE Physics U1 P1s 2007-2014.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Ch8bqFe2-mlQzrcn5Amz6TBw-u8YxCBn')">CAPE Physics 2017 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1jGALgWVdlpGjJcLlHK3j8xwUBUT-Im94')">CAPE Physics 2008 U1 P1 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JNGJEJK2WU7m9uw8VeeWITLafQpUKxO1')">CAPE Physics 2011 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1YCb6qPU-6adM7N4KyI0J1NIsBSYqH7l4')">CAPE Physics 2008 U1 P1 Rest of Region.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Pd3bVI-MBvoTUODjt8KRW1IaGhpJnpHl')">CAPE Physics 2010 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JlMsUw-H2bWaSItP_xET29t3MaxragBL')">CAPE Physics 2015 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1hllnbP9u5SjgcU1Ke__I0HhFKAnq0_NU')">CAPE Physics 2007 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1bGfMx1LQ4Qc-cNk1KkV5z1pynavrv5-n')">CAPE Physics 2013 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1cZc5gCc7ovATj5KXsmRu-LAHxG6Olw5k')">CAPE Physics 2014 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1f7ya0sLvncxxIQEkbixvpe_aHZa4ITNh')">CAPE Physics 2012 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15miAa-3TcxtcUBSGtNkTdjS_fwW9k0vt')">CAPE Physics U1 P1 Answers.xlsx</li>
+				<li class="pdf_link" onclick="load_pdf('1MEW_Bwt2mYS8UWON7aly11R_aJTeV3hR')">CAPE Physics U1 P1 Answers.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1KJL9h0QCsWJaq-CMQ-7Hdmlv50w22fJ6')">CAPE Physics 2009 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dAA-Rjb8oU2EWLmbwFA2dGkvKc4Kg762')">CAPE Physics 2017 U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1eDr0Q08GSLeqPOeNR-s_ksxssbXqDPwf')">CAPE Physics 2017 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1PTU6XGy6OtX9p4UYJtn9QGSl4TZnNFCc')">CAPE Physics 2016 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('17hlpFEmuyyYGYcUjnJI1_b4YYiTecxv-')">CAPE Physics 2015 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1esPLQjgZwNBJfqwgPJlolVVshiSBcwsv')">CAPE Physics 2014 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1KUYzaCFC6jgT3niBzISO32gik0oT4bjB')">CAPE Physics 2013 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1QPmrOYOpP5a5I5UMEJJm3ExmsVrOpL1K')">CAPE Physics 2012 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('195HosqiMijl3F8E5wJ3dIkbeJ0oqoQVA')">CAPE Physics 2012 U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tndgETIpaMTGlF2GfTEjWO6x4ix9f7iN')">CAPE Physics 2011 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1c--gJPowe0tY49FNzQXUgej-3LoWNAEW')">CAPE Physics 2010 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1f9b9gHYCKATHUsnFkDM77lfiLChuKsqG')">CAPE Physics 2009 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dqvSu3CILnCvwgYkHZirwRdbxZcgB2UE')">CAPE Physics 2008 U1 P2 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1lW5Z3UiVh7S0B-HNneY7mZZZbjBmkm7k')">CAPE Physics 2008 U1 P2 Rest of Region.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1TYCP55TlP2kD4wZrQh2ZC_5sS57UyyX9')">CAPE Physics 2007 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('10lKNrr0iqCvV3xsx9z93aRho85iEfc0D')">CAPE Physics 2007 Specimen U1 P3.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1hoVV3_0eHUzB5fetXzrHHsBf50PsaXdD')">CAPE Physics 2007 Specimen U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1UOGd8B7H6PKZoD8vYc0oENqqAk_rRdpB')">CAPE Physics 2006 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1N2-ncbD4lJ2i6k4F6dZ3ePf8_biSldxo')">CAPE Physics 2006 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1BNfL6esg5rC0B7hVcYaQxTSIdk6yHztB')">CAPE Physics 2005 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('12L2ulNsTiVFyp_B_XCr4zZHdkSrDmLcn')">CAPE Physics 2005 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VmaosvIOseM0hBhHj5pGKS_8NVwgmeDn')">CAPE Physics 2004 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kJGe6e7AvbLdE5viwdqJa0mdhlLCtiiN')">CAPE Physics 2004 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1OOS0h9fQE0vxNefZqxYOkAzpIvMSDAjn')">CAPE Physics 2003 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ucFW14h7FERBZLyO9AQilLDDRt42Kgmf')">CAPE Physics 2003 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NHVX2vPo-RBl_ARuT9o2JKlnEv7Wg3ae')">CAPE Physics 2002 U1 P2.PDF</li>
+				<li class="pdf_link" onclick="load_pdf('1tTT3hMuBIcsDTuiHSjtaW0MNpOzrt-pW')">CAPE Physics 2002 U1 P1.PDF</li>
+				<li class="pdf_link" onclick="load_pdf('1JeEliUZ2FtGMheJO6wv52SEUoUp8dbMK')">CAPE Physics 2001 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1IhkmC1NSA-v566B0lNeFNif2XzN85-KP')">CAPE Physics 2001 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MKOfaXkCaJ1V3Wo1uKwUaiS-dTBHT2dG')">CAPE Physics 1999 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Rkm3PSj2dv2ARNP7kssb-7QRu53XbPnV')">CAPE Physics 1999 U1 P1.pdf</li>
+                <!--End u1 pdf links here-->
+			</ul>
+            
 
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
 			crossorigin="anonymous"></script>
@@ -71,7 +136,57 @@
             </script>
 
             <h3>Unit 2</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1hD5bo9CDToeEhbTcJARRLp-MQKWESxbx#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u2 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1k5PB81aWBYhlln-5jVGCtU75Brjg4YVR')">CAPE Physics 2022 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rufw2t742oDroHYQcSJx9wbrU4OSBPix')">physics unit 2 paper 2 2021.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Cyh_gAaBin9hBJMlx9JsmzLOM1Uf8Gp7')">CAPE_Physics_U2_P1_2020.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1h6Id7tEyaVGGqYzpFOv6QA9sO5ZPN3Sw')">CAPE Physics 2018 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('12QX9NDYLH7S10pJDF4sZfxAYXDeFB1wx')">CAPE Physics 2019 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1wCIjwlSztE2p_K4JJXaQnpWdgv57hFzs')">CAPE Physics U2 P1 Answers (2007-2019).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kkUwIXebEg3HIYRmB3t2RGpCj9HTbSDz')">CAPE Physics 2018 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZR2wZ0pGMUX-qRnlucWj2vjKj1RvFC4G')">CAPE Physics 2019 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1AjOEy3wmcQaeo7quOJ4ySjPQBUVm1FXd')">CAPE Physics 2016 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1RtLZg733zPjafBND0AEZgyJvNdQMmeG1')">CAPE Physics 2017 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Dlmos75BqRHYgXZjWWfcQ3wEV76_c8aN')">CAPE Physics 2008 U2 P1 Rest of Region.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1UQ6FGY6R271dlHOKZYd50JbKPjkCS4lT')">CAPE Physics 2009 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tZw9Xwmk67GpCvvZxnkkFIkTv1g66gGd')">CAPE Physics 2010 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NkNyt_EwKSWI3xDCXl2TlrFKDrrca0m6')">CAPE Physics 2007 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1FFFm3RaVQdoXRsqWTH9eVKQW5rja4I7G')">CAPE Physics 2013 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kc8AeO2sINAS4nvURJx6A2p-N9aZGmFr')">CAPE Physics 2008 U2 P1 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1OQdl_YKd7G9HH1VBdM3l6nTxYH5hDvpD')">CAPE Physics 2012 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JlJBcashlQexlyD7lkgi-mEcte9FQe1o')">CAPE Physics 2011 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Uc1lVSt6MY_yk7b2QcyWAmGK99khgiLh')">CAPE Physics 2015 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1xPdewlUhlpdzX9iQGQs43JEQdVqixiX9')">CAPE Physics 2014 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15zFQZI3Mh-GXedZcwVXpoWlK9LJGx7eh')">CAPE Physics 2017 U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1aeJYDvdmTEj5FJ-Ct6LbYpoYPF1z9i7F')">CAPE Physics 2017 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1iI-p2Ze-SEE5yfzzx7tfJzuBlXgQac4q')">CAPE Physics 2016 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vduBdL35F4TQSQmMAnijHANWC1tMPMwf')">CAPE Physics 2015 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1zxla0XpBvjYK7Ww_3twcp0OgbfAJZ8Cp')">CAPE Physics 2014 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ppJ_Lcg_RzIZi9y5L9E08-meD6jI5plI')">CAPE Physics 2013 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('18HULpQAkXdJYUUe0FqNQfZ73pWA8Bryp')">CAPE Physics 2012 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1RQtkSWiHsZoWFd8UEqHYHORIQybUDnPk')">CAPE Physics 2011 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dibEC5aKUB-jcK5toSqH3SmJqARgNvIo')">CAPE Physics 2010 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1N70eIQAOPx1tsSVA35ng6II3p2dQGAWv')">CAPE Physics 2009 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1lXNaGXvL_Wq7wjciJRwpxIg4Sd8rj_wo')">CAPE Physics 2008 U2 P2 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1bQ8YJfIwwFyDlSiLylCYsqcGOqLieN_Z')">CAPE Physics 2008 U2 P2 Rest of Region.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1UDq-_psbdiObDH4YrsYUsHaMwqTRffVW')">CAPE Physics 2007 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Keg146rGz0Czc9Ds_MIl9rfvNKeCEQ4K')">CAPE Physics 2007 Specimen U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Nwu-9eQh1ir2vGYn8e8NwbyH8pl1CbPf')">CAPE Physics 2006 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VdkFEtj43evPFXA8uGaD_nLWpqhJbQUI')">CAPE Physics 2006 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1D3wk52dsSYBo-BE4wFkZU6YEM67Vn8rQ')">CAPE Physics 2005 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rwTWMIZE-te-8i0tbBwxLpYiY566LuOw')">CAPE Physics 2005 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1CC8Xl_4D2mhWYInWWnSs5jGJU1Tt37pA')">CAPE Physics 2004 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qLFeFTWDqBXwSS7lFbvXahtNWGhzZVB0')">CAPE Physics 2004 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1k4gwHU_NmoF4_72AmmL3POfkVtQJ_lfx')">CAPE Physics 2003 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1KaCW7ET8YwZ7CRtx6iycc5r4dEfmw1YN')">CAPE Physics 2003 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1GXzw2ytfgf01WtIUplf9mqSAQvPUVQhQ')">CAPE Physics 2002 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qZ11DOAupjzfIV_87ROu-9NbJElGIyIf')">CAPE Physics 2002 U2 P1.PDF</li>
+				<li class="pdf_link" onclick="load_pdf('1fyATsTjfQVBCty5EGA1JC2uCdPMMQCN_')">CAPE Physics 2001 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('19CtISnFF9akuERUMCC9QMm5zhdUUB_80')">CAPE Physics 2001 U2 P1.pdf</li>
+                <!--End u2 pdf links here-->
+			</ul>
+            
             
         </div>
 

@@ -54,21 +54,63 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1ISAo3chptcVJH07NDZUYKpOXuFzFzVXm#list" style="width:100%; height:600px; border:0;"></iframe>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
+
+			<ul id = "pdf_link_holder">
+				<!--Insert pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1rla4NY2sLHjG0dqZS7FDsU8hW1UDTgpN')">CSEC Information Technology June 2020 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ukVyfbuJoJdExLZDMrJ1BBEYXTv-12vC')">CSEC Information Technology June 2012 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1PpZdPUPQy2WuCGTRBzptCdBj0xVURcUj')">CSEC Information Technology June 2013 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1z3allCdCqZloAR3H2rtRqdXojl4d_HYW')">CSEC Information Technology June 2014 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qfES9DM83cwDaP8KXBl7or740i4kcgpL')">CSEC Information Technology June 2016 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1jeRBBq07GkvI6RZwjF__SXkXsa-t8zGl')">CSEC Information Technology June 2018 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('13MEqF8GV-dyW-sS5Fa7k-orAcIa6oTFb')">IT paper 2 - May June 2019.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1hQiOLqiuENtbdFnXTdI2FP5bNuzxJR3b')">P1 and Alternative Paper Jan 2010.doc</li>
+				<li class="pdf_link" onclick="load_pdf('1KDxjXg_iT3HmjFca9d0evp2gyIEywby-')">June 2018 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1pcCAt5AdU3Ex3Ym0e_ZIPfm7auDcP81M')">1993-2003 Solutions.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1sLhhE-ppP_BQhf2CZUR_sFcMtpl5jWav')">CSEC Information Technology June 2009 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1L4QiB4ResNzAkaBy6-GhaHAu6b7uHL0Q')">CSEC Information Technology June 2008 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('14xSNF2ujUIpHnnULT4A-wLcNfQS0h6T7')">CSEC Information Technology June 2008 P02 (Practical).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1afdbKUvBtqEDi_ZVOtmSyfDA8jzSfePu')">CSEC Information Technology June 2007 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1_11_ydMKSwevDlzcbrwDp8SBnTjvhoTF')">CSEC Information Technology June 2007 P02 (Practical2).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1UQTQ12eNeRqiKpmBeUFGE5ZY6qpoK7yF')">CSEC Information Technology June 2007 P02 (Practical).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1BvJBZ0IxsDGu70IY6Rp2iRTp32IJbrVr')">CSEC Information Technology June 2006 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MIT2IJEn16BKRMjCUOvG4bcJYdwW1tNW')">CSEC Information Technology June 2006 P02 (Practical2).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1wkXF1VceQVMs2B5QwUk4qCpJMp6pMAbx')">CSEC Information Technology June 2006 P02 (Practical).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('13Io6KNRHX6z-Gn74UlQsXUpdHdg0vITA')">CSEC Information Technology June 2005 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nHe_wVqDGf1YrXfXRTTD4PeoicVfM7yF')">CSEC Information Technology June 2005 P02 (Practical2).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1V7lNE--l8UNFoCdcKBJm7aG7xKltBHGH')">CSEC Information Technology June 2005 P02 (Practical).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Aur9P6V0bGbQveCxKuv91bD-rhCXRupQ')">CSEC Information Technology June 2017 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZOADQ7TBMycnzf4WTzWN4kAabMlWFTou')">CSEC Information Technology June 2016 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1zct_BlmINjAbO4WyzHXOjmXc0EftQ2kU')">CSEC Information Technology January 2017 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dnnZDRgjn367UGGH0lixDMIS8rt5XSu-')">CSEC Information Technology June 2009 P02 (Practical2).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZSub2bunXOvaQlEaRJb2XdC6CUS-AjiT')">CSEC Information Technology June 2015 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1sQItSzBFG4adb0kRz1nQyGrR6HRBTAvc')">CSEC Information Technology June 2014 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1KI4SboVMltxd4GANmJ2X46NVBgyyAvSB')">CSEC Information Technology January 2017 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1QEEDSZkxSl5encevOm81g5qXFZARWsNb')">CSEC Information Technology June 2012 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16kXm0f8kZHgcJmgUZ4LwykTepPJFmkNp')">CSEC Information Technology June 2009 P02 (Practical).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1purHVQ8NhM5xSylhtyJkAYwLvB65xN3d')">CSEC Information Technology June 2008 P02 (Practical2).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1_beG8_qIu0Dxyw83QjpA2zzNzrAvyFm5')">CSEC Information Technology January 2016 P03.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tYgzeU1Qpyvurnvx9i0SKQ0GdRM9oz6D')">CSEC Information Technology June 2011 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15-rlPjvmlkwFPKiVT-kdF2jmK8syFJm4')">CSEC Information Technology January 2016 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1u6hp3KgH3_BJCFq-0HXXhDuQ9BMj6xuk')">CSEC Information Technology January 2014 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qRoyOmA0SReyopteBj4o4r4aODzH1ZbA')">CSEC Information Technology January 2018 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VL4W9ZaxSN-EvnNWlDrTpDNWpXqnLsW6')">CSEC Information Technology January 2018 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1wCbOW-vkhHAFXM7XCs2CwLEuO-HMkyYq')">CSEC Information Technology January 2013 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1zjh1pF2Ix6EMAv8sNer0peNclTzvo7tQ')">CSEC Information Technology January 2012 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('195mglQW59gZeBQ4WVZ4PSasjzDJCN5JH')">CSEC Information Technology January 2011 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NOXsRQy9MQD30nOg-VWtfhQEQUX6pVIR')">CSEC Information Technology January 2010 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JJN_XW6eDxRwz6xJ11PC-JiAXU-NRYPX')">CSEC Information Technology January 2010 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1AUVCGMfc2EuvhWPYmjpDUm7w0s86s4un')">CSEC Information Technology January 2010 P02 (Teacher).pdf</li>
+                <!--End pdf links here-->
+			</ul></iframe>
         </div>
 
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-			crossorigin="anonymous"></script>
-		<!-- Subject Ad -->
-		<ins class="adsbygoogle"
-			style="display:block"
-			data-ad-client="ca-pub-2340541737631680"
-			data-ad-slot="5166997001"
-			data-ad-format="auto"
-			data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		
 
 
         <div id = "cover-img" class = "container">

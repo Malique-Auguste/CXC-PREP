@@ -47,8 +47,33 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
             <h3>Unit 1</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1QgZmpIRZ1ynqM3SpQb_tjCAkxLjvUE0n#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u1 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('170PoUakGSEP5BFuGwB6nvJTaJ-Dyhdvt')">CAPE Comp Sci 2013 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1oxJQjphySyrCd_MMONBXzHijMYKkqy2X')">CAPE Comp Sci 2015 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1neLqDmmDXwLiALdZ5XZDmSKGrBmpHYUU')">CAPE Comp Sci 2014 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ICuNro4MqDmoV3moVv7gqMIpj16Jljbl')">CAPE Comp Sci 2016 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dnM8fYfdTzfkvTJvM-YWppr3o_oUqKuo')">CAPE Comp Sci 2017 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1SQW8-tWmQVZEmfYJs3lQtr8wpEspw9E0')">CAPE Comp Sci 2018 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1XZYEbaosLAX-RNpjVlS7cvzL-UOIksBQ')">CAPE Comp Sci 2019 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1jQZ7oTwAPkDo0yYDqJehQmwn4nNH00md')">CAPE Comp Sci 2014 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16ADeFMjhZXK53bJ7VmSIVxOlcQlu6IXp')">CAPE Comp Sci 2015 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Csgdqon-tY5mQ0c5nwrpjOCbIUagFK9H')">CAPE Comp Sci 2016 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16mdXHskhdSIspDNm2ZmC4C49mlFxuUBb')">CAPE Comp Sci 2017 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Ovfr1j_H01rfB2j64d7EbwqJ4KDBrkI_')">CAPE Comp Sci 2018 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1HOf7ojYwRreco4sG_PSEZk6XnkbUPf9F')">CAPE Comp Sci 2019 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('18ILS_YfF_MA5af-xRyWD31DSFmxgyAfv')">CAPE Comp Sci 2020 U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ic2-avnKOVEmcNvrejjq5ljjMlLHyfe7')">CAPE Comp Sci 2021 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1bFeWohCSsoq_FdRJsI9AcRmH9xdh02MP')">CS 2014 U1 P2.pdf</li>
+                <!--End u1 pdf links here-->
+			</ul>
+            
 
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
 			crossorigin="anonymous"></script>
@@ -64,7 +89,27 @@
             </script>
 
             <h3>Unit 2</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1YnBVah6rsLNpNuz_y8q3_G0abepgZDP4#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u2 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1W5HafwZgsLLmar-xWsjhbe_nkpz0M7lr')">CAPE Computer Science 2022 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('12sMyw3giDd5aq_tTQl11RLn3yrPoRPa6')">CAPE Comp Sci 2014 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1pD0XTRIccfF_1jPch-g6qnCLghRoFCpM')">CAPE Comp Sci 2014 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Stg2fGgm3_Id4UiWAC0nzb9PYFcCfMeG')">CAPE Comp Sci 2015 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ii-2tJ-LLxTS23NEQDL2Nk5pxzzlHZ51')">CAPE Comp Sci 2015 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1uF1ll_LvDOS6RYw7cy_4c3-W8WU-P46K')">CAPE Comp Sci 2016 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tu3nDGIMqj8WwBgcr9bRqUjMJR2nBVr9')">CAPE Comp Sci 2016 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16SGX0J1nXOI8fle3d2xpb5t-HvJHsnSl')">CAPE Comp Sci 2017 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rV4COCwD0Ai3oYqS74j9MzN9WVPKiQuM')">CAPE Comp Sci 2017 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1uvM35I4PHhxeixINNJZe4liuDbDvY5rE')">CAPE Comp Sci 2018 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1_-m-HBoGEb6hbHJ2fBVRa9MoExHy57P_')">CAPE Comp Sci 2018 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ie6TO6DS-Dr1Kq9FHnwa_ILDNnhr1LQ7')">CAPE Comp Sci 2019 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('19dPWelhxqmdDvtaamLRRVSZ_ENXh1Jub')">CAPE Comp Sci 2019 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1yPKX6WBPLOXrgKXc7bRtB1l3w1xjoyNk')">CAPE Comp Sci 2020 U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MQIzvux4CNA7Y3t-wj9gr04p2FxBw7C2')">CAPE Computer Sciences 2015 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JBtuP8eaYMEIYWVf66sYP5Y-VvP9OaLs')">CAPE Computer Sciences 2014 U2 P2.pdf</li>
+                <!--End u2 pdf links here-->
+			</ul>
+            
             
         </div>
 
@@ -76,6 +121,7 @@
             <h2>Similar Subjects:</h2>
             <ul>
                 <li><a href="pure-maths.html">Pure Mathematics</a></li>
+                <li><a href="info-tech.html">Information Technology</a></li>
             </ul>
         </div>
 

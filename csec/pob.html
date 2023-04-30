@@ -47,21 +47,66 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1Qf9ltNr3D3QpG8bxo99qhbSns3f-QuZF#list" style="width:100%; height:600px; border:0;"></iframe>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
+
+			<ul id = "pdf_link_holder">
+				<!--Insert pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1EH0-v2n6JgfB4KMq2fXvIEXxEAoDt57N')">CSEC POB June 2017 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1XFNRUlJm23uchZMTyA_690PpJsrBNABb')">CSEC POB June 2016 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('19Zeq0Q-txMtHVMlONuPahRbm_T6DZ79S')">CSEC POB June 2009 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rWQ2hHzQuZFmqfQyAWSyN9hwYCaH3eqS')">CSEC POB June 2017 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1WiPGTGL8AmjAKoyO-qrFAJGQ2g73EFOP')">CSEC POB June 2015 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1BRzUpyd7J58ZsxICzgpFIt-_UgmUcADH')">CSEC POB June 2014 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tw17YVRwrqNpEQ41NCcwziHl3g-LjtKx')">CSEC POB June 2015 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VutHwQVIOcWl-cx_Bf1tyMMXpDkGraTI')">CSEC POB June 2008 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vWrcugtH8_4E8CXGUCJ3kk5sk0eLy_ur')">CSEC POB June 2016 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1RBH8Wa6rEPVPzJioUle-l-AGg06YlQFG')">CSEC POB June 2014 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1lgQbslY0iiCnFjzsZeCcW7O1O8Ws8RJ6')">CSEC POB June 2009 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZyZlsmAHsvHQ5D9WnLfs6GgAfSTMLKxy')">CSEC POB June 2013 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15yEEfzw2mgaHEPHzPq2gns-hg8rcTkFY')">CSEC POB June 2008 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1D9FtVugFv5M7K_dKpwuickkgbraLzHHU')">CSEC POB June 2013 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1OaaesErQCDCYn4F3_83hSgmY-EWlFHIV')">CSEC POB June 2012 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1hgVfgw4j4ec_Jm_6g9w4wQeN8pBbO7ct')">CSEC POB June 2007 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('147U3ebVzOot5651LChUjsCsLIJDCvSZC')">CSEC POB June 2007 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vJ-KToDx8z27Zx9bpfuddwD0pJrSv-34')">CSEC POB June 2011 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ti01jcUK3p8dUe-E8KGu7w8drQM0kvHn')">CSEC POB June 2012 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1SPHsznyZIkLIdNkDmbXN9m9E0nYXwmuq')">CSEC POB June 2010 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1bvy9puGIlZVEwuHqB0LOK8VDQcZNUK2s')">CSEC POB June 2010 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1U_raDbwRYrOTzf5BpsYdGQzxHcfz8WY5')">CSEC POB June 2011 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('18JjTfC7I4nIFhXrNcxU0xdgBFwKiLJAw')">CSEC POB June 2006 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1oQ9TO2MNvQlC2mCmK7xLh5VygWNPi7cK')">CSEC POB June 2006 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1u9Mxfj8eX42__l0FnsZulh7IFEO7zGbB')">CSEC POB January 2008 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1adzg8DrWYdlV4ziflAYJLtTWSrlYyiFe')">CSEC POB June 2005 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1UYHbQnvj6Ez4pk6Qn5uF3yh_RAaib_f1')">CSEC POB June 2005 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ygb9U7A1bqjVyuF-Ko3GoncSQFbB_hwJ')">CSEC POB January 2017 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1U8iKaHgo-iQZRM74Q3FjLXcwNYaRCS6d')">CSEC POB January 2018 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1KYP6uumb8DOBQrzcMlxq-KM5H7PQlyVd')">CSEC POB January 2018 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tBroyEBTfAxAtPGWpPk1LndjQztNZBK6')">CSEC POB January 2009 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('17HY-Eh0yKEHPtRVZMR1dKiewpXxGb8Zx')">CSEC POB January 2016 P02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1787fQS5kn7QpNQMgInR155Hu-gpJs7FG')">CSEC POB January 2016 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Zydlq2uK1Q8gEFfartcUShuZ5vjKyfsk')">CSEC POB January 2017 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rPQ8vGw5mn8p8xJZuvnpobS4Rc0cjKdm')">CSEC POB January 2015 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1u2c7g0c0Z2xPFjyF_qTpFoNoneMifddo')">CSEC POB January 2009 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1APEe43V-HbQYkZN2ZQ38JsjaArH24_6a')">CSEC POB January 2014 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1LKcmLD9lPY60NDfrvy0pP0QJWz-X9qO8')">CSEC POB January 2013 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1X4uYEQy10NIYefdPwfdbVG48hG7GSYLA')">CSEC POB January 2013 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16OP4t_bnlGd3gjj65lx0_g6A4wmSERfK')">CSEC POB January 2008 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1F_cBjIEp87b9zuoHptdKjMq8w4XaZqf6')">CSEC POB January 2012 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1L6v6iCkOJLa59e27eLhk64kBxRyQ3uqe')">CSEC POB January 2011 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1g7ntEE1TVxzRuwMKI_8WIO5mC3t9Qoc7')">CSEC POB January 2011 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VRCEqnuHGHw7EGRyP-L3nrZEZu5idptD')">CSEC POB January 2012 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('197IFdJNW-yQcWpt0tBm2LCP0p3qWDff4')">CSEC POB January 2010 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1b2lVbK-o46JOMYoAk1jAX4O6OW18W2VG')">CSEC POB January 2010 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ucWq_SnsgNBgVPWOAfcWmr6kSZCTLMsv')">CSEC POB Model Answers.pdf</li>
+                <!--End pdf links here-->
+			</ul></iframe>
         </div>
 
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-			crossorigin="anonymous"></script>
-		<!-- Subject Ad -->
-		<ins class="adsbygoogle"
-			style="display:block"
-			data-ad-client="ca-pub-2340541737631680"
-			data-ad-slot="5166997001"
-			data-ad-format="auto"
-			data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		
 
 
         <div id = "cover-img" class = "container">

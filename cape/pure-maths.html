@@ -54,8 +54,91 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
             <h3>Unit 1</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1uB7g8SCEL-udJZplAU_37DYPucZJ2Aez#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u1 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1SQ69y6v1NoHqBk_QJnvGX2X4YkdFocMF')">CAPE Pure Mathematics 2022 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1GOW5Sq27-csNbe5An0yQD7s11O4qG1sf')">June 2021 CAPE Pure Mathematics U1 P1 Solution</li>
+				<li class="pdf_link" onclick="load_pdf('1IZMPvVhxyMys4PImys17OXzNZsLkLsq7')">CAPE Pure Mathematics 2019 U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ySjOQmXxAQbKtLmOHCkDh9T4FWYndgvF')">Pure_Math_Unit_1_2021_-_Paper_01.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1i8JFn3HpjMgL9-ZGflN980L738OGVzu7')">Pure 2021 U1 P2 soln</li>
+				<li class="pdf_link" onclick="load_pdf('1hA1slA-9-953l4eoMnxNm9UYyXmBkNh3')">Pure Math Unit 1 2021 - Paper 02.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1iF6vy9JyL3YjlVIaip0Tdms15dycv4dx')">June 2019 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1E90Bdy52ybSpz8JI3Rya9oY_rXVtTSjW')">CAPE Pure Maths U1 MCQ Answers 2013-2019.jpg</li>
+				<li class="pdf_link" onclick="load_pdf('10YqEn76YcxFmAo-rnhv8bGaum0Wa2oKH')">June 2009 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('17wgIkaFIm1WEUixyB-QKlACeBJDg7qde')">June 2014 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1u_yz2KyBeiIxCtYtX94BdMR78jOzKZJD')">June 2018 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Df6DNhHX36ZxbBUdpbCehS5krdsb6zhr')">June 2018 CAPE Pure Mathematics U1 P2 Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1OcDbKBQaX7xXWHu6uwRw6gbJrlbfRUYu')">June 2017 CAPE Pure Mathematics U1 P2 Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vJJW0rPqQ_nHL7HwWAjDJd4U_4ehRf9f')">Pure Maths U1 1998 - 2018 P2 Solutions.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1H0m1yteeMs3LDMv-uem6BDQ64GMl53zP')">June 2016 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1aYaCe9wC9msGB9vmxiOq4IZmLQF0Tk6f')">June 2017 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1WqWcokXJAMtD5nJvcY3oN_e5aVoeUnh6')">June 2011 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1f0rJ_s4VgZ33iC-UWkkKM_Cd1j4nRXQt')">June 2010 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1cOFYudYjSyyDJbJIHwNmQlnhSf-6KOuW')">June 2012 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1GTBpqJ4ANLTxx5yA8RdtN0YXpNqe4kR2')">June 2013 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Qx0W2V_3VAMDDxIy4H2HdnwA2uwFcxFF')">June 2018 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1aJtedC1thZKBr9KROyr2zwKANNj0l0QG')">June 2017 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qMamFy7HUEmKzPFINxIITvUMEYWhpEVK')">Unit 1 Pure Mathematics (2008) P1 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1GJtW1xL1mG_F2RtqfH4xHhCf1ueIEGhk')">Unit 1 Pure Mathematics MCQ (2008 - 2015) Answers.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1zbIu4Ia9g5sq44kLigQo23JzEnVO28ol')">Unit 1 Pure Mathematics (2008) P1 ROR.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VfBbDcT1yYMT07EQReILgkG0CzLkxwoP')">June 2015 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('11kvdgEsehj-hi9xUab768i3mEUvQHCs_')">June 2016 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1XhnafAqfxaXEt03_70oa0pJ1ssWhL-6Q')">June 2015 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1TsNC-CuJQMNxOZybTpfVA42wyOtDwNgs')">June 2015 CAPE Pure Mathematics U1 P2 (Guyana).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nJl-UFs1z_-4z5PTgZDcNZ7fHbj_sMKe')">June 2007 CAPE Pure Mathematics U1 Specimen and Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1IsFofGeILZ4jfUkw9t3jGtKFfWD0dPWS')">June 2004 CAPE Pure Mathematics U1 Specimen and Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1XKAkKgnvMDsDKOpO1Ttcu5DExOoeu-JW')">June 2012 CAPE Pure Mathematics U1 Specimen and Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1fxDiGlOwIAOSNWWlOgThDKNiSFo4l00D')">June 2015 CAPE Pure Mathematics U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nx53vcLFHSBXQa5F8m2lfhjjlqa58ETl')">June 2014 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16Ru0MSZtmxzJiwkVw1x4d7si4k8FDkkK')">June 2014 CAPE Pure Mathematics U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1X0hJ_1px1WU81gg-VC02gkf90dULnK-d')">June 2013 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Mfo236lctUM2nDI1FSeW4uHY_te841Am')">June 2013 CAPE Pure Mathematics U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1l_UXl_zqVHi8gViQXAMYT97t_v6fYdcG')">June 2012 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16P7gC1PC535cCdy3JLawgoA9IGqHWVfV')">June 2011 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('17EDsiGKmzjZaoiTRtcsbVhkc81PUessK')">June 2012 CAPE Pure Mathematics U1 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1fq4CzGxaPhydPjWli0YyLW-OuNbwFC94')">June 2011 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qlEni0TzAx97HUinPcU49CjL_8FdcsTJ')">June 2010 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ioQ68xVhDhOlVmGg69aGquiaX0ABDAMh')">June 2009 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1doHjOyTM4y7szZUaQo2K6_suUFVBYhCv')">June 2010 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1yByFwlvkDvdBHqaMWMkUPCvWwgGMHI2q')">June 2009 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1EUio7RXp3o0POoxN7SPUKNG_pxaNIdj_')">June 2008 CAPE Pure Mathematics U1 TT P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('17L5isgu7Tn6oiRfhhRiaNBmgAvhOl0h8')">June 2008 CAPE Pure Mathematics U1 TT P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1S9ZLKiGkdVFXwQyjpFIAGpr_JR2YDdjO')">June 2008 CAPE Pure Mathematics U1 ROR P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kofSVZVPmdOT579D7BLwt5NJSlVD7AZg')">June 2008 CAPE Pure Mathematics U1 ROR P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1u0Y7v4yHZNgFlpFOzlezTLGmUS5C6tCY')">June 2007 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1QaTl58eW0bl7LihZNxE7Np3VcVgZ62iP')">June 2007 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1juXguNxBUkSzdwJmaEOr_jcX_Ylq35bu')">June 2007 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1iEI4BatO1aBaAN7O1jNFkZzSoS24QzZD')">June 2006 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MhCUQPxXdN5D3OKQ-1-hRUeImJRuo0_t')">June 2006 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1HXJxqV0ed4ZRszNTSVi4OwK1oG2ihkR1')">June 2005 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nM6VepOsSDY08-9s9f2Ib8WDZQqA1TYJ')">June 2005 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nrohlDzCmOUO_ANxO4aYGxuq3AxBD7cH')">June 2005 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NVc3Dm9KZeIeI8sfunXmgXgTB2Z4YG43')">June 2004 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vjkdABwfoFLP_fIaIeORDQ-jUnkTWECX')">June 2004 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1sFLSF2hprIoffoKtsJUe7XSp2JKE-WhF')">June 2004 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1TPkgI8SznlBD-3-Lz9bGHgHZuYe41gj1')">June 2003 CAPE Pure Mathematics U1 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VOpQiVKj6iExmKh91buqYbtviSA5xIEe')">June 2003 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1hmE28GfStaiJY0HpIAE8yPX5kVlka3fT')">June 2003 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('19FxNRXeO4Q8RTr0exDr31-HV9juqChq4')">June 2002 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1g_Wi6rdSIY1kVqoZXw_JONiqLkJjeT9x')">June 2002 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1rUqySwHI1vpLxNZEyJR_XUTUN-gSagWK')">June 2001 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Gf_t_FKKaqOzM7juPPPszMyNl0AQckoB')">June 2000 CAPE Pure Mathematics U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dqkcUEIGzyCTe6QBQkBYbLES4OTXeM6G')">June 2001 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vS1Jr3gYE4d5Dm_vp-UPpCZsUbDkPLZ4')">June 2000 CAPE Pure Mathematics U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Sf56QJ7xfZSnKvojqe6DbMNqygfOVrqp')">June 1999 CAPE Pure Mathematics Specimen U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1pjuz_17rOsV_rdKctVffUA60px0v-hBL')">June 1999 CAPE Pure Mathematics Pilot U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('159aHT_cN5hTkdqCUvFs5HrNYcvlLMr_a')">June 1998 CAPE Pure Mathematics Pilot U1 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1QZbJaV17JKDVsYM-wWVLBEcl_cLx-w7e')">June 1999 CAPE Pure Mathematics Pilot U1 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('10x13PHZ8CH6o4G552CoyQ8T8ioFjCTyY')">June 1998 CAPE Pure Mathematics Pilot U1 P1.pdf</li>
+                <!--End u1 pdf links here-->
+			</ul>
+            
 
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
 			crossorigin="anonymous"></script>
@@ -71,7 +154,77 @@
             </script>
 
             <h3>Unit 2</h3>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1bVLRI__QYidomMgzjc_xQwxdsDnUS-FK#list" style="width:100%; height:600px; border:0;"></iframe>
+            <ul id = "pdf_link_holder">
+				<!--Insert u2 pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1TyIMwBJedcwQIwOgreX8AB6zxz1cmCqp')">CAPE Pure Mathematics 2022 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nlNuOdkMClGYn1yTdWz2N6izQqi8LIHv')">CAPE Pure Maths U1 MCQ Answers 2013-2019.jpg</li>
+				<li class="pdf_link" onclick="load_pdf('1KewyuZE8QCLbpCEfOK6NMKhmlK9emwbr')">CAPE_MATHEMATICS_UNIT_2_July_2021-min.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1CHlv403h7uzQ0VLKiR3SUPq6LdEfgoBd')">June 2008 CAPE Pure Mathematics U2 P1 Rest of Region.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('198qCEm94A3jsuJU5jj_s6HTbRlCRpFNW')">June CAPE Pure Mathematics U2 P1 Answers (2008-2019).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZVE2vjTAHEcSvKbqfvWtEs3ja6-sELaJ')">June 2019 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1fRHGtHq9eH70bXWnVdb1rV4TB0X9c0wi')">June 2017 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('11sqBmn_vlTNH3RAqisadpbL4afoVjSUG')">June 2016 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1yb_9kN50kLU_1CrjEL9SLoeSQMTo-eaO')">June 2018 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15Y3ZWOgDX3foEaokFeIMe2L9gM7x3CZB')">June 2008 CAPE Pure Mathematics U2 P1 Trinidad.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MTyprQAdk5RwjbcLr3ksGbCQ6ITnFIEn')">June 2009 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1jLfPhvZgsRKdWxyb5AHAzp1PFZq00Xkk')">June 2010 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1d-iOJUr5nAPNinna16nKlh-QLGK9leKC')">June 2011 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1TAZtJgQ2YqQ3yf7XsLdunRG5ZTvkmXyc')">June 2012 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1VSM-Jz4E60Agfwf4hKgxKqHNNd2tc_IA')">June 2013 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Aa-ceCW8LK0B99k1qeChEUl6QQISNq48')">June 2015 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1qA8ianIDJYecyNV_IxBgsv6OH2qPLRXv')">June 2014 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('193F6tMmQakfLj1in1oV8kW8AzmNTolBR')">June 2019 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1JbGrUV8pthAsstjlIgA_o75Kf-F9D2uZ')">June 2018 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tTeOqsNUcwDC67S2Sr4HjSFiGSyU_rfV')">June 2017 CAPE Pure Mathematics U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Zb0OBC7AHFRFyLAVq_jpFuAELHCPkvpo')">June 2017 CAPE Pure Mathematics  U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Sq0zvMugW-RJ3hAFBbhb-pHlXhWmY4Qy')">June 2016 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1fsDGj52I7IKCEP2-CmXJ8Sajgxrs3i24')">June 2015 CAPE Pure Mathematics U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vwFsx04H74TJZjQK1F-qNMgTEw3pPOvg')">June 2015 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1YQ6Bvq2RsihHi6GNsk0ye8QqnLyEkFsw')">June 2014 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1_xZBwCGkiD6zBYl7WhC8WJV6Cs3XP9NT')">June 2014 CAPE Pure Mathematics U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NcICeF9EQCDBAKJwarEsG8CgFpuz_XxX')">June 2013 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1p2clixDvGGdyaphQcBAUpc4F7IzJqMDE')">June 2013 CAPE Pure Mathematics U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1LXFaOusWQH2KwNbZyfk6wUwlRF-ZUr7j')">June 2012 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1xOJbaWxVUeyid4XYKrW8uTsFhkHJ1bxt')">June 2012 CAPE Pure Mathematics U2 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1WKNrXL0lqZE1ZKAu2LZBGYUsp2SfsoI_')">June 2011 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1v0N89faOwhLvewfs_Tyh_4A1Rvyeu0lS')">June 2011 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('15rva1oJyz2ilfYeJF6_C5PuhBp4n1a4N')">June 2010 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1MqkRAjoV-W4PABHtI8kkzohy1Do6jghN')">June 2010 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('13KgO4YKiIj3e39YmhDo0370W5AtH8jHN')">June 2009 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1o4Sp9H1vvYEuBoS6SRdl3oB4rSY8T-9l')">June 2008 CAPE Pure Mathematics U2 TT P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1wtYh19bYnt5HsLx9niIhlDFt1cCcc877')">June 2009 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1FaH3MFZqJiFDbjF9cvkNbwmjsUerk1g9')">June 2008 CAPE Pure Mathematics U2 TT P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1v_qguJrTNgAOcbla6lK1Zo3pklWIAxet')">June 2008 CAPE Pure Mathematics U2 ROR P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1an8krubJRtSiohLCXxAwIOU43DVLNwl0')">June 2008 CAPE Pure Mathematics U2 ROR P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1mioWv94d8HhZcSt3GEsQgJAi44DoNWVy')">June 2007 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZfhyELwrc75vCq1OdpMvzesmU3I7FwZK')">June 2007 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1D95_2TJu7Ig8D_GP3TYY4e2dYjlf8LSe')">June 2006 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1DSZgrjRBtgAxcKJf5mxBbGSssw0p61Le')">June 2006 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1vJ-88aMIaV2fn2KQQ_fZjSqsfnPXy-N8')">June 2006 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1AjH6BlRISouJf2hYhWfQfqIrrwFxUyHy')">June 2005 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Hd537YJI6VoD0NxSd_lwOUv2jzaw17in')">June 2005 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1041XleJsYaQI489EUQEHCwSCjErx9t-d')">June 2005 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1tILkphWVlmxEVhkM1p9jPZKIHq2JbDAG')">June 2004 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1WK0klIEM3_KEUA7UGDkD76t5K8LX8S3P')">June 2004 CAPE Pure Mathematics U2 P3B.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1fwfm3MuNXyBy88eFPq3VEuNlmSFQCUwQ')">June 2004 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1esElAPjADykBq_bAjiYTA4cproL1e6HC')">June 2003 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1jA2vf7WnY1QrlR-UG-8HFfTeyFYTw4iC')">June 2003 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1mHYJbqUuDMrl03MeZfeOjCrAmChahS1Q')">June 2002 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Daty2Xd_AYVOiHiAj5TC-iX2s7bNl8od')">June 2002 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1o6m29iLCRrJVmksKDEVcEYyJZvgqSQyG')">June 2001 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1NKWEr2WeuZzjjRx-urFFiQ_wkS6X--ph')">June 2001 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1mzY9lBZPw9EOryOeCsIfJIA5ZmxOQTZ6')">June 2000 CAPE Pure Mathematics U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1bdfjTM8qum3vNQHVApR6ZtkPrabHTykf')">June 1999 CAPE Pure Mathematics Specimen U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1kMJzMl4HiFop11HrNxjChMdUtywqWKiS')">June 2000 CAPE Pure Mathematics U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1i6KNEbA4CTll_Z0HKYFDQJujFwFjXI88')">June 1999 CAPE Pure Mathematics Specimen U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('185KzbF-jXu6kiMlM_BSEVGCoCjqs7ZL_')">June 1999 CAPE Pure Mathematics Pilot U2 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1cpQB16mjqqELw8caOHtCgTvXtdKGhNIX')">June 1999 CAPE Pure Mathematics Pilot U2 P1.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1nFfucE9tQL7OKUtxhSnZYDvTaeu0G6D3')">June 2012 CAPE Pure Mathematics U2 Specimen and Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1z1b0Vo3zCL24GErxpZFY648vvP8ZpWjC')">June 2007 CAPE Pure Mathematics U2 Specimen and Solution.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1GJ_q7OD9i9FRfoSp-n28o3HiDwORmXfO')">June 2004 CAPE Pure Mathematics U2 Specimen and Solution.pdf</li>
+                <!--End u2 pdf links here-->
+			</ul>
+            
             
         </div>
 

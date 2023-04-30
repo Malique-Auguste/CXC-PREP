@@ -54,21 +54,48 @@
 
         <div id = "papers">
             <h2>Past Papers</h2>
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1vLCtcpp_fH5q4SEgX4jX6055acAlxIK7#list" style="width:100%; height:600px; border:0;"></iframe>
+            <div id = "pdf_parent">
+				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+				<div id = "pdf_background" onclick="hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="hide_pdf()">
+			</div>
+
+			<ul id = "pdf_link_holder">
+				<!--Insert pdf links here-->
+				<li class="pdf_link" onclick="load_pdf('1X-_zHoDfoGXbYMUrQ5k4dT4zVQ1Qv589')">F5 P2 Human Systems.docx</li>
+				<li class="pdf_link" onclick="load_pdf('1kJPukvTgzQJMS1eKx9OacIhjazkmJuXo')">Geography June 2018 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1C-oi9TxFUJTgh3K9j4aakEhmTvOeQjrM')">F5 exam P2 questions.docx</li>
+				<li class="pdf_link" onclick="load_pdf('1xE98xKKKGgYF0lEYNGvAjQrJbV-m8wVP')">F5 P2 Climate_Vegetation.docx</li>
+				<li class="pdf_link" onclick="load_pdf('1xQ5PjRvmjWlS0nw8E1wogKQmsRMotCjq')">F5 Human Environment systems.docx</li>
+				<li class="pdf_link" onclick="load_pdf('1Zd2Sxes0iFzs2qcewR65ZhRMw6ljBf0A')">CSEC Geography June 2016 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('184Wvk_gunKaNVMESbY53Gwb6kPDmVU-z')">CSEC Geography June 2015 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1B1zbj0Vb34vN1n9SfH4oykv7uumNsjCY')">CSEC Geography June 2014 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1ZcKCssDxh0rx9ns6LXnxO0llgnGAlyZa')">CSEC Geography June 2010 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1dgHq6_2kG9KkdMlGzZxmJH7IYwT19fEh')">CSEC Geography June 2009 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1XbQRRyyeCDzGxahj1aj_8Rf2Wk5TDwuH')">CSEC Geography June 2007 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1J_jw4s1iomXG9aIqZrcMjymgsQbMyZph')">CSEC Geography June 2006 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1umrEctk66zYp_zc8mDtJ7zWKEgLCtmU-')">CSEC Geography June 2011 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1B78V5-q5udAudTIGmM2kO9cYxlTiORC8')">CSEC Geography June 2017 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16wJLAUWtG6zicljVaPxmyxZFBLNO4Re9')">CSEC Geography June 2010 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1EhhAqHI-_LRWW-JztCA_--fbHYRq_vHy')">CSEC Geography June 2015 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1J9bwpx-knIHUN8bPU07c7uXART6KYk_g')">CSEC Geography June 2014 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1aqiE3JFwWF8pB4wotUM_LSGaR-uc_hEH')">CSEC Geography June 2009 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1uXHhuOXN4dBHvhlaxEFMbclF1EcDttKJ')">CSEC Geography June 2012 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1iLJJpRnTscut9iKiZjHKZI5gKBgtDvt6')">CSEC Geography June 2013 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1knbgFK1yXg_xpR-r8UAX56CnuKCsdVRJ')">CSEC Geography June 2012 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1DbYlgKp7Pau-XvgA-bknurRJx06C2Z2W')">CSEC Geography June 2008 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1_xGhYCYQRFBaR-SNx6SYHQGZ8mbCyG0w')">CSEC Geography June 2013 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Hm_zqIk5EzP1_Rdkn8_HJG79sZpiu0cn')">CSEC Geography June 2008 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16zu8c7EONNvaLzVg0qOotUy1giPfMupJ')">CSEC Geography June 2011 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1Nyjy-0RHG-_1C1Ud6D6PngCNlMzXAsl-')">CSEC Geography June 2007 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('16FmCMWvl8H24fgWXfCFwFPrkhL9bK2gt')">CSEC Geography June 2006 P032.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1yBlK5RLpYEpBD1ovHFnnu9iv9MTUecTh')">CSEC Geography June 2005 P2.pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1U8hFxT-tpXl2vxEegxpLvV3v7Oz_FW_h')">CSEC Geography June 2005 P032.pdf</li>
+                <!--End pdf links here-->
+			</ul></iframe>
         </div>
 
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-			crossorigin="anonymous"></script>
-		<!-- Subject Ad -->
-		<ins class="adsbygoogle"
-			style="display:block"
-			data-ad-client="ca-pub-2340541737631680"
-			data-ad-slot="5166997001"
-			data-ad-format="auto"
-			data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		
 
 
         <div id = "cover-img" class = "container">

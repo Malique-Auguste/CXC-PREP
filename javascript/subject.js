@@ -1,5 +1,6 @@
 var li, no_questions, input, all, none;
 var file_data;
+var pdf_viewer;
 
 function sort() {
     var topics, input, filter ;
@@ -124,4 +125,21 @@ function load_files () {
         console.log(file)
     }
 })
+}
+
+function load_pdf(id) {
+    console.log("loading pdf: " + id)
+
+    if (pdf_viewer == null) {
+        pdf_viewer = document.getElementById("pdf_viewer")
+    }
+
+    var src = "https://drive.google.com/file/d/" + id + "/preview"
+    pdf_viewer.setAttribute("src", src)
+    //"height":"0", "width":"0", "border":"none"}
+    pdf_viewer.parentElement.setAttribute("style", "width: 100vw; height:100vh; visibility: visible;")
+}
+
+function hide_pdf() {
+    pdf_viewer.parentElement.setAttribute("style", "width: 0vw; height: 0vh; visibility: hidden;")
 }
