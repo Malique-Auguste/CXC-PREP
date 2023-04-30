@@ -25,4 +25,3 @@ while x < 10:
     print('-' * 20)
     print()
 
-    x += 1

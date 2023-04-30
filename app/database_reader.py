@@ -6,8 +6,12 @@ class data_reader:
         data_file = pd.read_excel(database_path)
 
         output_links = ""
-        for data in data_file.values:
+        data_values = data_file.sort_values(by = "name", ascending=False)
+
+
+        for data in data_values.values:
             output_links += f"\t\t\t\t<li class=\"pdf_link\" onclick=\"load_pdf('{data[1]}')\">{data[0]}</li>\n"
+
         return output_links
 
 

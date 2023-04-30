@@ -2,6 +2,8 @@
     --color1: #e67919;
     --color2: #37515f;
     --color3: #f0eeea;
+    --color4: #dfdeda;
+
 
 }
 
@@ -55,7 +57,7 @@ h3, p, span, li, input, textarea, label {
 }
 
 li {
-    padding: 0.25rem;
+    padding: 0.4rem;
 }
 
 article > * {

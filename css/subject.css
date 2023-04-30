@@ -61,17 +61,12 @@
 }
 
 #questions, #pdf_link_holder {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    overflow: auto;
+    max-height: 50vh;
+    background-color: var(--color4);
+    padding: 2vw;
 }
 
 #no-questions {
     display: none;
-}
-
-@media screen and (max-width: 800px) { 
-    #questions, #pdf_link_holder {
-        grid-template-columns: 1fr;
-    }
-
 }
