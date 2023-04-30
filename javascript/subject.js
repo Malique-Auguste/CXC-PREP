@@ -7,7 +7,7 @@ function sort() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        button= document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -65,7 +65,7 @@ function select_all() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        button= document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -83,7 +83,7 @@ function select_none() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        button= document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }

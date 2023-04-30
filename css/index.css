@@ -35,7 +35,7 @@ ul {
     padding: 0;
 }
 
-ul > li {
+ul > button{
     margin: 1vw;
     list-style-type: none;
 }

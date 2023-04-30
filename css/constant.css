@@ -56,7 +56,7 @@ h3, p, span, li, input, textarea, label {
     font-size: 1.25rem;
 }
 
-li {
+button{
     padding: 0.4rem;
 }
 
@@ -87,7 +87,7 @@ nav>ul{
     
 }
 
-nav li {
+nav button{
     list-style-type: none;
 }
 
