@@ -49,8 +49,8 @@
             <h2>Past Papers</h2>
             <div id = "pdf_parent">
 				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
-				<div id = "pdf_background" onmousedown="hide_pdf()"></div>
-				<img src="../media/back button.png" alt="back button" id = "back_button" onmousedown="hide_pdf()">
+				<div id = "pdf_background" onclick="javascript:hide_pdf()"></div>
+				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="javascript:hide_pdf()">
 			</div>
             <h3>Unit 1</h3>
             <ul id = "pdf_link_holder">
@@ -75,7 +75,7 @@
             <h3>Unit 2</h3>
             <ul id = "pdf_link_holder">
 				<!--Insert u2 pdf links here-->
-				<li class="pdf_link" onmousedown="load_pdf('1iE_xQPCcBejdyPmxEbqxfYMcEaMYzHY2')">CAPE Information Technology 2022 U2 P2.pdf</li>
+				<li class="pdf_link" onclick="javascript:load_pdf('1iE_xQPCcBejdyPmxEbqxfYMcEaMYzHY2')">CAPE Information Technology 2022 U2 P2.pdf</li>
                 <!--End u2 pdf links here-->
 			</ul>
             
