@@ -32,12 +32,6 @@ article > div {
     grid-column: 1 / 5;
 }
 
-id {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
 h1 {
     color: var(--color1)
 }
@@ -104,6 +98,12 @@ a {
 
 .container {
     padding: 0vw;
+}
+
+.id {
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 800px) { 
