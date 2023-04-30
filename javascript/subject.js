@@ -7,7 +7,7 @@ function sort() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        button= document.getElementById("questions").getElementsByTagName("li");
+        li = document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -65,7 +65,7 @@ function select_all() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        button= document.getElementById("questions").getElementsByTagName("li");
+        li = document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -83,7 +83,7 @@ function select_none() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        button= document.getElementById("questions").getElementsByTagName("li");
+        li = document.getElementById("questions").getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -137,9 +137,9 @@ function load_pdf(id) {
     var src = "https://drive.google.com/file/d/" + id + "/preview"
     pdf_viewer.setAttribute("src", src)
     //"height":"0", "width":"0", "border":"none"}
-    pdf_viewer.parentElement.setAttribute("style", "width: 100vw; height:100vh; visibility: visible;")
+    pdf_viewer.parentElement.setAttribute("style", "width: 100vw; height:100vh; display: inline;")
 }
 
 function hide_pdf() {
-    pdf_viewer.parentElement.setAttribute("style", "width: 0vw; height: 0vh; visibility: hidden;")
+    pdf_viewer.parentElement.setAttribute("style", "width: 0vw; height: 0vh; display: none;")
 }

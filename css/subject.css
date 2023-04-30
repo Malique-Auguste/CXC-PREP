@@ -10,7 +10,7 @@
     width:0; 
     height:0; 
     border:0;
-    visibility: hidden;
+    display: none;
 }
 
 #pdf_viewer {

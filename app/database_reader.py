@@ -10,7 +10,7 @@ class data_reader:
 
 
         for data in data_values.values:
-            output_links += f"\t\t\t\t<buttonclass=\"pdf_link\" onclick=\"load_pdf('{data[1]}')\">{data[0]}</li>\n"
+            output_links += f"\t\t\t\t<li class=\"pdf_link\" onclick=\"load_pdf('{data[1]}')\">{data[0]}</li>\n"
 
         return output_links
 
