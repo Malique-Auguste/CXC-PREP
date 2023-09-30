@@ -1,6 +1,13 @@
 var li, no_questions, input, all, none;
 var file_data;
 var pdf_viewer;
+var yia_ad_viewer;
+
+document.onload = init()
+
+function init () {
+    setTimeout(show_ad, 3000)
+}
 
 function sort() {
     var topics, input, filter ;
@@ -142,4 +149,42 @@ function load_pdf(id) {
 
 function hide_pdf() {
     pdf_viewer.parentElement.setAttribute("style", "width: 0vw; height: 0vh; display: none;")
+}
+
+function show_ad() {
+    console.log("loading ad: ")
+
+    if (yia_ad_viewer == null) {
+        yia_ad_viewer = document.getElementById("yia")
+    }
+
+    var ad_number = parseInt(window.localStorage.getItem("ad_number")) || 0
+    console.log("S0 Ad number: ", ad_number)
+
+    if(ad_number >= 8) {
+        return
+    }
+    else if(ad_number % 3 == 0 && ad_number != 0) {
+        ad_number += 1;
+        return
+    }
+    else if (window.localStorage.getItem("ad_opened") != null) {
+        ad_number += 1
+        console.log("Ad number: ", ad_number)
+    }
+    
+    ad_number += 1
+    console.log("Ad number: ", ad_number)
+    yia_ad_viewer.setAttribute("style", "display: block;")
+    window.localStorage.setItem("ad_number", ad_number)
+}
+
+function hide_yia_ad() {
+    yia_ad_viewer.setAttribute("style", "width: 0vw; height: 0vh; display: none;")
+}
+
+function go_to_yia(){
+    window.localStorage.setItem("ad_opened", "true")
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfX4XI-iMAKuKVwOajw3WgzuE3sn12ezO6hCDgdLGjXge1b9g/viewform","_blank")
+    hide_yia_ad()
 }
