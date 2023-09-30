@@ -161,7 +161,7 @@ function show_ad() {
     var ad_number = parseInt(window.localStorage.getItem("ad_number")) || 0
     console.log("S0 Ad number: ", ad_number)
 
-    if(ad_number >= 8) {
+    if(ad_number >= 9) {
         return
     }
     else if(ad_number % 3 == 0 && ad_number != 0) {
