@@ -166,6 +166,8 @@ function show_ad() {
     }
     else if(ad_number % 3 == 0 && ad_number != 0) {
         ad_number += 1;
+        window.localStorage.setItem("ad_number", ad_number)
+
         return
     }
     else if (window.localStorage.getItem("ad_opened") != null) {

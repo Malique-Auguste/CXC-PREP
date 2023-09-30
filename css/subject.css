@@ -98,6 +98,7 @@
 
 #ad_container img {
     object-fit: contain;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) { 
