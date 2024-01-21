@@ -187,6 +187,7 @@ function hide_yia_ad() {
 
 function go_to_yia(){
     window.localStorage.setItem("ad_opened", "true")
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfX4XI-iMAKuKVwOajw3WgzuE3sn12ezO6hCDgdLGjXge1b9g/viewform","_blank")
+    //window.open("https://docs.google.com/forms/d/e/1FAIpQLSfX4XI-iMAKuKVwOajw3WgzuE3sn12ezO6hCDgdLGjXge1b9g/viewform","_blank")
+    window.open("https://wa.me/18687255626","_blank")
     hide_yia_ad()
 }
