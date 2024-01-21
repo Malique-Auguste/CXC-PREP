@@ -189,6 +189,6 @@ function hide_yia_ad() {
 function go_to_yia(){
     window.localStorage.setItem("ad_opened", "true")
     //window.open("https://docs.google.com/forms/d/e/1FAIpQLSfX4XI-iMAKuKVwOajw3WgzuE3sn12ezO6hCDgdLGjXge1b9g/viewform","_blank")
-    window.open("https://wa.me/18687255626?text=Hi+there%21+I%27d+like+to+join+your+lessons+so+that+I+can+excel+at+my+maths+exams.+When+can+we+get+started%3F","_blank")
+    window.open("https://wa.me/18687255626?text=Hi+there%21+I+want+to+join+your+lessons+so+that+I+can+excel+at+my+maths+exams.+When+can+we+get+started%3F","_blank")
     hide_yia_ad()
 }
