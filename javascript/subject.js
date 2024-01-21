@@ -158,27 +158,27 @@ function show_ad() {
         yia_ad_viewer = document.getElementById("yia")
     }
 
-    var ad_number = parseInt(window.localStorage.getItem("ad_number")) || 0
-    console.log("S0 Ad number: ", ad_number)
+    var ad_number = parseInt(window.localStorage.getItem("lessons_number")) || 0
+    console.log("S0 lessons number: ", ad_number)
 
     if(ad_number >= 9) {
         return
     }
     else if(ad_number % 3 == 0 && ad_number != 0) {
         ad_number += 1;
-        window.localStorage.setItem("ad_number", ad_number)
+        window.localStorage.setItem("lessons_number", ad_number)
 
         return
     }
-    else if (window.localStorage.getItem("ad_opened") != null) {
+    else if (window.localStorage.getItem("lessons_opened") != null) {
         ad_number += 1
-        console.log("Ad number: ", ad_number)
+        console.log("lessons number: ", ad_number)
     }
     
     ad_number += 1
-    console.log("Ad number: ", ad_number)
+    console.log("lessons number: ", ad_number)
     yia_ad_viewer.setAttribute("style", "display: block;")
-    window.localStorage.setItem("ad_number", ad_number)
+    window.localStorage.setItem("lessons_number", ad_number)
 }
 
 function hide_yia_ad() {
