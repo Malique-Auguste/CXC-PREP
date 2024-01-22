@@ -161,7 +161,7 @@ function show_ad() {
     var ad_number = parseInt(window.localStorage.getItem("lessons_number")) || 0
     console.log("S0 lessons number: ", ad_number)
 
-    if(ad_number >= 9) {
+    if(ad_number >= 15) {
         window.localStorage.setItem("lessons_number", 0)
         return
     }
