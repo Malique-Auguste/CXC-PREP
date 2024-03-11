@@ -109,13 +109,11 @@
 
 #filter_holder {
     grid-column: 1 / span 3;
-    grid-row: 2 / 2;
 
 }
 
 #questions_holder {
     grid-column: 4 / span 3;
-    grid-row: 2 / 2;
 }
 
 #questions, #pdf_link_holder {
@@ -126,14 +124,20 @@
 
 
 @media screen and (max-width: 800px) {
+    #u1papers {
+        grid-column: 1 / span 6;
+    }
+    
+    #u2papers {
+        grid-column: 1 / span 6;
+    }
+
     #filter_holder {
         grid-column: 1 / span 6;
-        grid-row: 2 / 2;
     }
 
     #questions_holder {
         grid-column: 1 / span 6;
-        grid-row: 3 / 3;
     }
     
 }
