@@ -1,7 +1,23 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+#card {
+    background-color: var(--unselected-bg);
+    border-radius: 15px;
+    padding: 2vw;
+}
+
+#card:hover {
+    background-color: var(--selected-bg);
+}
+
+#card {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
 }
 
 @media screen and (max-width: 800px) { 

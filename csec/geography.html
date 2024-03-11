@@ -18,10 +18,9 @@
     <link class = "logo" rel = "icon" href = "../media/logo-black.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-     crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="../css/constant.css">
     <link rel="stylesheet" href="../css/subject.css">
     
@@ -30,56 +29,27 @@
     <script src="../javascript/subject.js"></script>
 </head>
 <body>
-    <article>
-        <nav>
-            <ul>
-                <li><a href ="../index.html">Home</a></li>
-                <li><a href = "../about.html">About</a></li>
-                <li><a href = "../contact.html">Contact</a></li>
-                <li><a href = "../privacy.html">Privacy Policy</a></li>
-            </ul>
-        </nav>
+    <nav>
+		<ul>
+			<li><a href ="../index.html">Home</a></li>
+			<li><a href = "../about.html">About</a></li>
+			<li><a href = "../privacy.html">Privacy Policy</a></li>
+		</ul>
+	</nav>
 
-        <div id = "intro">
-            <h1>Geography</h1>
-        </div>
+    <div id = "title">
+        <h1>Geography</h1>
+    </div>
 
-        <!--<div id = "yia" onclick="javascript:hide_yia_ad()">
-            <div id = "ad_container" target="_blank" onclick="javascript:go_to_yia()">
-                <img src="../media/mentor launch post - students - web - small.png">
-            </div>
-            <img src="../media/back button.png" alt="back button" id = "back_button" onclick="javascript:hide_yia_ad()" >
-        </div>-->
-
-        <div>
-            <h2>External Resources</h2>
-            <ul>
-                <li><a href="https://www.youtube.com/c/NatkenEducationalServices/" target="_blank">Natken Educational Services</a></li>
-            </ul>
-        </div>
-
-        <div>
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-     			crossorigin="anonymous"></script>
-			<!-- 1st Stretch Add -->
-			<ins class="adsbygoogle"
-				style="display:block"
-				data-ad-client="ca-pub-2340541737631680"
-				data-ad-slot="2829583326"
-				data-ad-format="auto"
-				data-full-width-responsive="true"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-
+    <div id = "pdf_parent" display = "none">
+		<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
+		<div id = "pdf_background" onclick="javascript:hide_pdf()"></div>
+		<img src="../media/back button.png" alt="back button" id = "back_button" onclick="javascript:hide_pdf()">
+	</div>
+	
+    <article id = "content">
         <div id = "papers">
             <h2>Past Papers</h2>
-            <div id = "pdf_parent">
-				<iframe visibility = "hidden" id = "pdf_viewer" frameborder = "0" sandbox="allow-same-origin allow-scripts"></iframe>
-				<div id = "pdf_background" onclick="javascript:hide_pdf()"></div>
-				<img src="../media/back button.png" alt="back button" id = "back_button" onclick="javascript:hide_pdf()">
-			</div>
 
 			<ul id = "pdf_link_holder">
 				<!--Insert pdf links here-->
@@ -113,18 +83,12 @@
 				<li class="pdf_link" onclick="javascript:load_pdf('1yBlK5RLpYEpBD1ovHFnnu9iv9MTUecTh')">CSEC Geography June 2005 P2.pdf</li>
 				<li class="pdf_link" onclick="javascript:load_pdf('1U8hFxT-tpXl2vxEegxpLvV3v7Oz_FW_h')">CSEC Geography June 2005 P032.pdf</li>
                 <!--End pdf links here-->
-			</ul></iframe>
+			</ul>
         </div>
 
-		
-
-
-        <div id = "cover-img" class = "container">
-            <img src="../media/students-grass.jpg" alt="">
-        </div>
-
-        <div>
-            <h2>Select the check boxes below to filter the database of CSEC Past Paper Questions by topic:</h2>
+        <div id = "filter_holder">
+            <h2>Filter</h2>
+            <p>Select the check boxes below to filter the database of CSEC past paper questions by topic:</p>
 			<div id = "filter">
 <!--topic starts here-->
                 <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="javascript:select_all()" checked = "true"><span>Select All</span></span></label>
@@ -161,23 +125,8 @@
 			</div>
 		</div>
 
-        <div>
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2340541737631680"
-				crossorigin="anonymous"></script>
-			<!-- 2nd Stretch Ads -->
-			<ins class="adsbygoogle"
-				style="display:block"
-				data-ad-client="ca-pub-2340541737631680"
-				data-ad-slot="7124051550"
-				data-ad-format="auto"
-				data-full-width-responsive="true"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-
-        <div>
-			<h2>Database of Sorted Questions: </h2>
+        <div id = "questions_holder">
+			<h2>Database of Sorted Questions:</h2>
 			<ul id = "questions">
 <!--question starts here-->
                 <li data-topic = "s-d-g">May/June Paper 2 2021 #1.a</li>
@@ -448,16 +397,7 @@
 			</ul>
 			<p id = "no-questions">No questions could be found for the selected topic(s).</p>
 		</div>
-
-        <div>
-            <h2>Similar Subjects:</h2>
-            <ul>
-                <li><a href= "biology.html">Biology</a></li>
-                <li><a href= "mathematics.html">Mathematics</a></li>                
-            </ul>
-        </div>
-
-        <footer>This webiste (CXC Prep) is not affiliated with the Caribbean Examination Council (CXC). The use of any of their works is considered fair use. Any external links are being provided as a convenience and are for informational purposes only. Linking to any external websites doesn't constitute an endorsement or an approval by the owner/editor of CXC Prep of any content/opinions published by these external websites.</footer>
     </article>
+	<footer>This webiste (CXC Prep) is not affiliated with the Caribbean Examination Council (CXC). The use of any of their works is considered fair use. Any external links are being provided as a convenience and are for informational purposes only. Linking to any external websites doesn't constitute an endorsement or an approval by the owner/editor of CXC Prep of any content/opinions published by these external websites.</footer>
 </body>
 </html>

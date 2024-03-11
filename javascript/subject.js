@@ -1,4 +1,4 @@
-var li, no_questions, input, all, none;
+var li, li_parent, no_questions, input, all, none;
 var file_data;
 var pdf_viewer;
 var yia_ad_viewer;
@@ -14,7 +14,8 @@ function sort() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        li_parent = document.getElementById("questions");
+        li = li_parent.getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -60,9 +61,11 @@ function sort() {
     };
 
     if (question_showing) {
+        li_parent.style.display = "block"
         no_questions.style.display = "none"
     }
     else {
+        li_parent.style.display = "none"
         no_questions.style.display = "inline"
 
     }
@@ -72,7 +75,8 @@ function select_all() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        li_parent = document.getElementById("questions");
+        li = li_parent.getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -90,7 +94,8 @@ function select_none() {
     if (input == undefined) {
         no_questions = document.getElementById("no-questions");
         input = document.getElementsByClassName("topic");
-        li = document.getElementById("questions").getElementsByTagName("li");
+        li_parent = document.getElementById("questions");
+        li = li_parent.getElementsByTagName("li");
         all = document.getElementById("select-all");
         none = document.getElementById("select-none")
     }
@@ -100,6 +105,7 @@ function select_none() {
             input[i].checked = false;
         }
         all.checked = false;
+
         sort()
     }
 }
@@ -113,8 +119,6 @@ function load_files () {
           .then((data) => {
             console.log(data);
           file_data = data;
-        
-
     var file_list = document.getElementById("papers_list")
 
     console.log(2);

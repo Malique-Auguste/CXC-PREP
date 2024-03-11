@@ -1,0 +1,36 @@
+#title {
+    margin: 5vw 10vw;
+}
+
+#title > h1 {
+    font-size: 3.6rem;
+    font-family: Bevan, serif;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-align: left;
+}
+
+
+#first, #fifth {
+    grid-column: 1 / span 3;
+}
+
+#second, #sixth {
+    grid-column: 4 / span 3;
+}
+
+#third{
+    grid-column: 1 / span 4;
+}
+
+#fourth {
+    grid-column: 5 / span 2;
+}
+
+#seventh {
+    grid-column: 1 / span 2;
+}
+
+#eighth{
+    grid-column: 3 / span 4;
+}

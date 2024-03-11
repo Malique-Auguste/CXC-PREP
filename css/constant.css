@@ -1,125 +1,83 @@
 :root{
-    --color1: #e67919;
-    --color2: #37515f;
-    --color3: #f0eeea;
-    --color4: #dfdeda;
-
-
+    --unselected-bg: hsla(50,0%,95%,0.8);
+    --selected-bg: hsla(50,100%,95%,0.8);
+    --accent: hsla(50, 100%, 50%, 1);
 }
 
 * {
-    font-family: 'Ubuntu', sans-serif;
-}
+    font-family: Jaldi, sans-serif;
+    font-size: 1.2rem;
 
-body {
-    background-color: var(--color3);
     margin: 0;
     padding: 0;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+nav {
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
 
-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+    width: 20%;
+    top: 2vh;
+    margin: 2vh 0;
 
-article > div {
-    grid-column: 1 / 5;
-}
-
-h1 {
-    color: var(--color1)
-}
-
-h2, h3 {
-    color: var(--color2);
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 8rem;
-    text-align: center;
-}
-
-h2 {
-    font-size: 3rem;
-
-}
-
-h3, p, span, li, input, textarea, label {
-    font-size: 1.25rem;
-}
-
-li {
-    padding: 0.4rem;
-}
-
-article > * {
-    display: inline-block;
-    border: 2px solid black;
-    padding: 5vw;
-}
-
-nav, footer {
-    padding: 1vw;
-    grid-column: 1 / 5;
-    background-color: black;
-    color: white;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.75rem;
+    background-color: var(--unselected-bg);
+    padding: 1vh 0vh;
+    border-radius: 25px;
 }
 
 nav>ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 0;
     margin: 0vw;
-    
-}
-
-nav li {
     list-style-type: none;
 }
 
+nav > ul > li > a {
+    padding: 1vh;
+    border-radius: 25px;
+}
+
+nav > ul > li > a:hover {
+    background-color: var(--selected-bg);
+}
 
 a {
-    color: inherit;
+    color: black;
 }
 
-.container {
-    padding: 0vw;
+ul {
+    list-style-type: none;
 }
 
-.ads {
+p {
+    margin: 1vw 0;
+}
+
+#content {
+    margin: 0vw 10vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 5vw;
+    row-gap: 5vw;
+}
+
+#content > * {
+    background-color: var(--unselected-bg);
+    border-radius: 15px;
+    padding: 2vw;
+}
+
+#content > *:hover {
+    background-color: var(--selected-bg);
+}
+
+#content > .photo {
     padding: 0;
-    margin: 0;
-    width: 100%;
 }
 
-@media screen and (max-width: 800px) { 
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3, p, span, li, input, textarea, label {
-        font-size: 1rem;
-    }
-
-    footer {
-        font-size: 0.5rem;
-    }
+footer {
+    font-size: 0.8rem;
+    margin: 5vw 2vw 2vw 2vw;
 }

@@ -70,9 +70,7 @@ function email() {
             window.localStorage.setItem("denied-counter", denied_counter - 1)
         }
         else {
-            email_getter.style.setProperty("display", "block");
-        
-            window.addEventListener('click', 
+            email_getter.style.setProperty("display", "block");            window.addEventListener('click', 
                 function(e){   
                     if (!document.getElementById('email-form').contains(e.target)){
                         email_getter.style.setProperty("display", "none");
@@ -84,9 +82,7 @@ function email() {
     }
     else {
         console.log(email_state)
-        email_getter.style.setProperty("display", "block");
-        
-        window.addEventListener('click', 
+        email_getter.style.setProperty("display", "block");        window.addEventListener('click', 
             function(e){   
                 if (!document.getElementById('email-form').contains(e.target)){
                     email_getter.style.setProperty("display", "none");
@@ -137,9 +133,7 @@ function crquiz() {
             window.localStorage.setItem("crquiz-denied-counter", denied_counter - 1)
         }
         else {
-            crquiz.style.setProperty("display", "block");
-        
-            window.addEventListener('click', 
+            crquiz.style.setProperty("display", "block");            window.addEventListener('click', 
                 function(e){   
                     if (!document.getElementById('email-form').contains(e.target)){
                         crquiz.style.setProperty("display", "none");
@@ -151,9 +145,7 @@ function crquiz() {
     }
     else {
         console.log(crquiz_state)
-        crquiz.style.setProperty("display", "block");
-        
-        window.addEventListener('click', 
+        crquiz.style.setProperty("display", "block");        window.addEventListener('click', 
             function(e){   
                 if (!document.getElementById('crquiz-inner').contains(e.target)){
                     crquiz.style.setProperty("display", "none");

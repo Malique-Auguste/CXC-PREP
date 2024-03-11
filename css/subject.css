@@ -1,5 +1,13 @@
-#intro, #papers {
-    grid-column: 1 / 5;
+#title {
+    margin: 5vw 10vw;
+}
+
+#title > h1 {
+    font-size: 3.6rem;
+    font-family: Bevan, serif;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-align: left;
 }
 
 #pdf_parent {
@@ -48,64 +56,82 @@
 }
 
 
-#filter {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
+
+
+#papers {
+    grid-column: 1 / span 6;
+
 }
 
-#filter > label {
-    margin: 1vw;
-    list-style-type: none;
+#u1papers {
+    grid-column: 1 / span 3;
 }
 
-#questions, #pdf_link_holder {
-    overflow: auto;
-    max-height: 50vh;
-    background-color: var(--color4);
+#u2papers {
+    grid-column: 4 / span 3;
+}
+
+#spanish_ques {
+    grid-column: 1 / span 6;
+}
+
+#spanish_ques ol {
     padding: 2vw;
+}
+
+#spanish_ques button {
+    background-color: rgba(0, 0, 0, 0);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
 
 #no-questions {
     display: none;
 }
 
-#yia {
-    border: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+#filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1vw;
+}
 
+#filter input {
     display: none;
 }
 
-#ad_container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: fit-content;
-    height: 70vh;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.0);
+#filter span, #spanish_ques button{
+    padding: 0vw 0.25vw;
+    border: 2px dotted var(--accent);
+    border-radius: 15px;
 }
 
-#ad_container img {
-    object-fit: contain;
-    cursor: pointer;
+#filter span:hover, #spanish_ques button:hover {
+    border: 2px solid var(--accent);
+    border-radius: 15px;
 }
 
-@media screen and (max-width: 600px) { 
-    #ad_container {
-        width: 90vw;
-        height: fit-content;
-        z-index: 100;
-        background-color: rgba(0, 0, 0, 0.0);
-    }
+#filter input:checked + span, #spanish_ques button:checked {
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+#filter_holder {
+    grid-column: 1 / span 3;
+    grid-row: 2 / 2;
+
+}
+
+#questions_holder {
+    grid-column: 4 / span 3;
+    grid-row: 2 / 2;
+}
+
+#questions, #pdf_link_holder {
+    display: block;
+    height: 60vh;
+    overflow-y: scroll;
 }
