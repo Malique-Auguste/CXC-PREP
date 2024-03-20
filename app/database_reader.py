@@ -35,7 +35,7 @@ class data_reader:
 
                 injection += line
 
-        elif unit == "unit1":
+        elif unit == "unit1" or unit == "unit 1":
             for line in target_file_read.readlines():
                 if "<!--Insert u1 pdf links here-->" in line:
                     line += output_html
