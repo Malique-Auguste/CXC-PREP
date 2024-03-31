@@ -1,5 +1,6 @@
 :root{
     --unselected-bg: hsla(50,0%,95%,0.8);
+    --unselected-bg-solid: hsla(50,0%,95%,1);
     --selected-bg: hsla(50,100%,95%,0.8);
     --accent: hsla(50, 100%, 50%, 1);
 }
@@ -83,6 +84,37 @@ p {
     margin: 1vw 0;
 }
 
+#pop_up_holder {
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#pop_up {
+    background-color: var(--unselected-bg-solid);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    z-index: 100;
+    border-radius: 15px;
+    padding: 4vw;
+}
+
+#back_button {
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    width: 3vh;
+    height: 3vh;
+    z-index: 100;
+}
+
 #content {
     margin: 0vw 10vw;
     display: grid;
@@ -91,13 +123,13 @@ p {
     row-gap: 5vw;
 }
 
-#content > * {
+#content > *{
     background-color: var(--unselected-bg);
     border-radius: 15px;
     padding: 2vw;
 }
 
-#content > *:hover {
+#content > *:hover{
     background-color: var(--selected-bg);
 }
 
