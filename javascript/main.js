@@ -13,7 +13,7 @@ document.onload = init;
 
 function init() {
     setTimeout(record_new_user, 2000)
-    setTimeout(show_pop_up, 3000)   
+    //setTimeout(show_pop_up, 3000)   
 }
 
 function record_new_user() {
