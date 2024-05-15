@@ -1,8 +1,11 @@
 :root{
-    --unselected-bg: hsla(50,0%,95%,0.8);
+    --unselected-bg: hsla(0, 0%, 95%, 0.8);
     --unselected-bg-solid: hsla(50,0%,95%,1);
-    --selected-bg: hsla(50,100%,95%,0.8);
+    --unselected-bg-dark: hsla(0, 0%, 0%, 0.8);
+
+    --selected-bg: hsla(50,100%,85%, 0.8);
     --accent: hsla(50, 100%, 50%, 1);
+
 }
 
 * {
@@ -39,10 +42,9 @@ nav {
     left: 50%;
     transform: translateX(-50%);
 
-    min-width: 25%;
+    min-width: 25vw;
     top: 5vh;
 
-    background-color: var(--unselected-bg);
     padding: 1vh 0vh;
     border-radius: 25px;
 }
@@ -64,8 +66,16 @@ nav > ul > li > a {
     border-radius: 25px;
 }
 
-nav > ul > li > a:hover {
-    background-color: var(--selected-bg);
+#theme {
+    /*if font size isn't made small, the button is unusually long. i do not understnad why*/
+    font-size: 0.1rem;
+
+    padding: 0.5vw;
+    border-radius: 25px;
+
+    position: fixed;
+    right: 5vw;
+    top: 6vh;
 }
 
 a {
@@ -119,7 +129,7 @@ p {
     z-index: 100;
 }
 
-#content {
+article {
     margin: 0vw 10vw;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -127,19 +137,34 @@ p {
     row-gap: 5vw;
 }
 
-#content > *{
-    background-color: var(--unselected-bg);
+article > .photo {
+    padding: 0;
+}
+
+article > * {
     border-radius: 15px;
     padding: 2vw;
 }
 
-#content > *:hover{
+.light_theme > *{
+    background-color: var(--unselected-bg);
+    border: none;
+}
+
+.light_theme > div:hover, .light_theme > nav a:hover, .light_theme > button:hover{
     background-color: var(--selected-bg);
 }
 
-#content > .photo {
-    padding: 0;
+
+.dark_theme > *{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
 }
+
+.dark_theme > *:hover, .dark_theme > nav  a:hover{
+    border: 2px solid var(--selected-bg);
+}
+
 
 footer {
     font-size: 0.8rem;
@@ -160,7 +185,11 @@ footer {
     }
     
     nav {
-        width: 80%;
+        width: 70vw;
+    }
+
+    #theme {
+        right: 1vw;
     }
 
     * {

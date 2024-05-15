@@ -31,13 +31,17 @@
     <script src="../javascript/subject.js"></script>
 </head>
 <body>
-    <nav>
-		<ul>
-			<li><a href ="../index.html">Home</a></li>
-			<li><a href = "../about.html">About</a></li>
-			<li><a href = "../privacy.html">Privacy Policy</a></li>
-		</ul>
-	</nav>
+
+    <div class = "light_theme">
+        <nav>
+            <ul>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href = "../about.html">About</a></li>
+                <li><a href = "../privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <button id = "theme" onclick="change_theme()"><img src="/media/sun.svg" alt=""></button>
+    </div>
 
     <div id = "title">
         <h1>Information Technology</h1>
@@ -59,14 +63,14 @@
 		</div>
 	</div>
 	
-    <article id = "content">
+    <article id = "content" class = "light_theme">
         <div id = "u1papers">         
             <h2>Unit 1 Past Papers</h2>
             <ul id = "pdf_link_holder">
 				<!--Insert u1 pdf links here-->
 				<li class="pdf_link" onclick="load_pdf('1sygRJ2OcnFtKugzMGIwfUuqx4FiMRYY6')">SOLUTION PAPER 1  2016 UNIT 1.pdf</li>
 				<li class="pdf_link" onclick="load_pdf('1L1kriPQmNnIHaQtX9RhI9Uyj_jBqYZ5V')">SOLUTION PAPER 1   2015  UNIT 1.pdf</li>
-				<li class="pdf_link" onclick="load_pdf('1DjY1Lfb-DPEfUmzJQi18MRm90lV1n0tH')">CAPE® IT Past Papers (Up to 2019).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1DjY1Lfb-DPEfUmzJQi18MRm90lV1n0tH')">CAPEï¿½ IT Past Papers (Up to 2019).pdf</li>
 				<li class="pdf_link" onclick="load_pdf('1yqVc__lfY2GegVIoSX3SC6UCbbrOT0LF')">CAPE IT Unit 1 P1 2019.pdf</li>
 				<li class="pdf_link" onclick="load_pdf('1lJmyUPC3eq_194XPhxM5FhNhyapgQNaG')">CAPE IT Unit 1 P1 2018.pdf</li>
 				<li class="pdf_link" onclick="load_pdf('15C8WmSAzG9SsNSzre7zzIljnHHpXhQSd')">CAPE IT Unit 1 P1 2017.pdf</li>
@@ -84,7 +88,7 @@
             <ul id = "pdf_link_holder">
 				<!--Insert u2 pdf links here-->
 				<li class="pdf_link" onclick="load_pdf('1UUeJcoL7HRF9pvlAy_9JP6IDGBdMGoXS')">unit_2_2014_10-Jun-2019_18-49-51.pdf</li>
-				<li class="pdf_link" onclick="load_pdf('1V3ME09hFetNY949hcm0tJu7jTQU8nSQf')">CAPE® IT Past Papers (Up to 2019).pdf</li>
+				<li class="pdf_link" onclick="load_pdf('1V3ME09hFetNY949hcm0tJu7jTQU8nSQf')">CAPEï¿½ IT Past Papers (Up to 2019).pdf</li>
 				<li class="pdf_link" onclick="load_pdf('1m7nnit3WXnZp_dp_lCqsig7-6wL631sO')">CAPE_IT_Unit_2_2018_P1.pdf</li>
 				<li class="pdf_link" onclick="load_pdf('16H4Kk67cFHY6YeT-Cv5txfk3gjfTi2Pf')">CAPE_IT_U1_P1_2019_1.pdf</li>
 				<li class="pdf_link" onclick="load_pdf('1iE_xQPCcBejdyPmxEbqxfYMcEaMYzHY2')">CAPE Information Technology 2022 U2 P2.pdf</li>

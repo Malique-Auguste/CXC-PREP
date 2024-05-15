@@ -40,10 +40,11 @@
     z-index: 0;
 }
 
-#pdf_link_holder {
+.pdf_link {
     cursor: pointer;
     text-decoration: underline;
 }
+
 
 
 
