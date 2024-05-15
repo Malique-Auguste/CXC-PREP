@@ -122,7 +122,7 @@ function show_pop_up() {
         }
         
 
-        if(seen_for_session == 0 && pop_up_amount < 2) {
+        if(seen_for_session == 0 && pop_up_amount < 1) {
             console.log("first daily visit -> pop_up")
             pop_up_holder.setAttribute("style", "width: 100%; height: 100%; display: block;")
             
