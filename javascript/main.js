@@ -26,7 +26,7 @@ function init() {
 
 function theme_on_load() {
     let theme = window.localStorage.getItem("next-theme");
-    if (theme == "dark" || theme == null) {
+    if (theme == "dark") {
         window.localStorage.setItem("next-theme", "light")
         change_theme()
     }
