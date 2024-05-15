@@ -3,8 +3,6 @@ var file_data;
 var pdf_viewer;
 var yia_ad_viewer;
 
-document.onload = init()
-
 function sort() {
     var topics, input, filter ;
     if (input == undefined) {
