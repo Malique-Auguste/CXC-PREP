@@ -21,7 +21,7 @@ function init() {
     console.log("init")
     setTimeout(theme_on_load, 10)
     setTimeout(record_new_user, 2000)
-    setTimeout(show_pop_up, 2000)   
+    //setTimeout(show_pop_up, 2000)   
 }
 
 function theme_on_load() {
