@@ -78,6 +78,10 @@ nav > ul > li > a {
     top: 6vh;
 }
 
+#theme:hover {
+    cursor: pointer;
+}
+
 a {
     color: black;
 }
